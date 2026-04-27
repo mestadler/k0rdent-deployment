@@ -1,3 +1,13 @@
+---
+intent: deploy-workload-cluster-on-azure-quickstart
+audience: platform-engineers
+prereqs: management-cluster-with-k0rdent-and-azure-admin-access
+inputs: azure-identity-service-principal-and-clustertemplate-selection
+outputs: azure-clusterdeployment-applied-and-child-cluster-provisioning-started
+related_docs: docs/quickstarts/index.md, docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md, docs/reference/template/template-azure.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # QuickStart 2 - Azure target environment
 
 In this QuickStart guide, we'll be gathering information and performing preparatory steps to enable k0rdent (running on your management node) to manage clusters on Azure, and deploying a child cluster.

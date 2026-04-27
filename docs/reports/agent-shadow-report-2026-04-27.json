@@ -1,7 +1,7 @@
 {
   "version": "1",
-  "generated_at": "2026-04-27T17:55:50.192406+00:00",
-  "commit_sha": "c799c04",
+  "generated_at": "2026-04-27T17:59:53.024170+00:00",
+  "commit_sha": "3fed143",
   "input_file": "docs/shadow-queries.json",
   "summary": {
     "total_cases": 30,

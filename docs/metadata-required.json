@@ -20,6 +20,16 @@
     "docs/reference/template/template-vsphere.md",
     "docs/reference/template/template-predefined.md",
     "docs/reference/template/template-byo.md",
-    "docs/reference/crds/index.md"
+    "docs/reference/crds/index.md",
+    "docs/quickstarts/quickstart-2-aws.md",
+    "docs/quickstarts/quickstart-2-azure.md",
+    "docs/quickstarts/quickstart-2-gcp.md",
+    "docs/quickstarts/quickstart-2-openstack.md",
+    "docs/quickstarts/quickstart-2-remote.md",
+    "docs/quickstarts/quickstart-2-kubevirt.md",
+    "docs/user/user-create-cluster.md",
+    "docs/user/services/index.md",
+    "docs/user/services/understanding-servicetemplates.md",
+    "docs/user/services/servicetemplate-parameters.md"
   ]
 }

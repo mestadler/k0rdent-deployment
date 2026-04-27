@@ -1,3 +1,13 @@
+---
+intent: create-clusterdeployment-from-template
+audience: platform-engineers
+prereqs: available-credential-and-valid-clustertemplate-in-management-cluster
+inputs: credential-reference-template-name-and-clusterdeployment-config-values
+outputs: submitted-clusterdeployment-resource-and-provisioning-observability-path
+related_docs: docs/reference/template/index.md, docs/reference/crds/index.md, docs/quickstarts/index.md, docs/admin/clusters/deploy-cluster.md
+last_verified_version: 1.8.0
+---
+
 # Deploying a Cluster
 
 k0rdent simplifies the process of deploying and managing Kubernetes clusters across various cloud platforms through the use of `ClusterDeployment` objects, which include all of the information k0rdent needs to know in order to create the cluster you want. This `ClusterDeployment` system relies on predefined templates and credentials.

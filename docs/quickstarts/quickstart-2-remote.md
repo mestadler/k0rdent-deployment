@@ -1,3 +1,13 @@
+---
+intent: deploy-remote-cluster-quickstart
+audience: platform-engineers
+prereqs: management-cluster-with-k0rdent-and-ssh-accessible-linux-hosts
+inputs: remote-host-connectivity-ssh-secret-and-clustertemplate-selection
+outputs: remote-clusterdeployment-applied-and-cluster-provisioning-started
+related_docs: docs/quickstarts/index.md, docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md, docs/reference/template/template-remote.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # QuickStart 2 - Existing infrastructure
 
 In many cases, you will want k0rdent (running on your management node) to deploy a k0s child cluster on existing infrastructure. The remote servers will serve as worker nodes in the cluster, while the control plane components will reside within the management cluster and be managed by k0smotron. By doing this, you maximize your existing hardware and simplify administration costs by decreasing the number of servers required to run your infrastructure.

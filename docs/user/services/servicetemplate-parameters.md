@@ -1,3 +1,13 @@
+---
+intent: reference-servicetemplate-parameters
+audience: platform-engineers
+prereqs: servicetemplate-concepts-and-service-deployment-workflow
+inputs: target-service-spec-provider-configuration-and-template-fields
+outputs: parameter-level-reference-for-authoring-and-updating-servicetemplates
+related_docs: docs/user/services/index.md, docs/user/services/understanding-servicetemplates.md, docs/reference/crds/index.md, docs/user/services/add-service-to-clusterdeployment.md
+last_verified_version: 1.8.0
+---
+
 # Parameter List
 
 Here is an idea of the parameters involved.

@@ -1,3 +1,13 @@
+---
+intent: deploy-workload-cluster-on-gcp-quickstart
+audience: platform-engineers
+prereqs: management-cluster-with-k0rdent-and-gcp-project-access
+inputs: gcp-authentication-provider-enablement-and-clustertemplate-selection
+outputs: gcp-clusterdeployment-applied-and-child-cluster-provisioning-started
+related_docs: docs/quickstarts/index.md, docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md, docs/reference/template/template-gcp.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # QuickStart 2 - GCP target environment
 
 In this QuickStart guide, we'll be gathering information and performing preparatory steps to enable

@@ -1,3 +1,13 @@
+---
+intent: understand-servicetemplate-format-and-sources
+audience: platform-engineers
+prereqs: familiarity-with-kubernetes-resource-definitions-and-k0rdent-services
+inputs: service-source-type-and-template-implementation-choice
+outputs: valid-servicetemplate-definition-patterns-for-service-delivery
+related_docs: docs/user/services/index.md, docs/user/services/servicetemplate-parameters.md, docs/reference/crds/index.md, docs/reference/template/template-byo.md
+last_verified_version: 1.8.0
+---
+
 # Understanding ServiceTemplates
 
 `ServiceTemplate` objects are a representation of the source where k0rdent can find a resource or set of resources to
