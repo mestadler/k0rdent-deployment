@@ -1,0 +1,19 @@
+name: deploy
+purpose: Install or upgrade k0rdent control components.
+consumes_schema: agents/schemas/input.schema.json
+produces_schema: agents/schemas/output.schema.json
+order:
+  - kcm
+  - ksm
+  - k0rdent_ui
+constraints:
+  - kof is excluded from deployment.
+  - Use locked artifacts from artifact-lock.yaml.
+  - Use values files from environments/<environment>/values/.
+outputs:
+  phase_state: state/<run-id>/deploy.json
+success_criteria:
+  - Helm releases for kcm, ksm, k0rdent-ui are deployed and ready.
+failure_policy:
+  - status: fail
+  - rollback_hint: Roll back failed release using recorded revision.

@@ -1,0 +1,19 @@
+site_name: k0rdent Docs
+site_description: k0rdent documentation workspace
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: mkdocs
+
+exclude_docs: |
+  .git/**
+  .github/**
+  site/**
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true

@@ -1,0 +1,24 @@
+name: preflight
+purpose: Validate runtime prerequisites before deployment.
+consumes_schema: agents/schemas/input.schema.json
+produces_schema: agents/schemas/output.schema.json
+checks:
+  tooling:
+    - kubectl
+    - helm
+  cluster:
+    - context_exists
+    - api_reachable
+  platform:
+    - ingress_available
+    - storageclass_available
+    - cert_manager_optional
+  registry:
+    - oci_login_if_required
+outputs:
+  phase_state: state/<run-id>/preflight.json
+success_criteria:
+  - All required checks pass for selected policy profile.
+failure_policy:
+  - status: blocked
+  - next_action: Resolve prerequisite failures and re-run preflight.

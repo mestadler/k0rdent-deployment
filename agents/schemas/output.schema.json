@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/agents/output.schema.json",
+  "title": "Agent Output",
+  "type": "object",
+  "required": ["run_id", "agent", "status", "next_action", "evidence"],
+  "properties": {
+    "run_id": { "type": "string" },
+    "agent": {
+      "type": "string",
+      "enum": ["planner", "preflight", "catalog", "deploy", "validation", "report"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pass", "fail", "blocked"]
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 3
+    },
+    "rollback_hint": {
+      "type": "string"
+    },
+    "updated_artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "path"],
+        "properties": {
+          "name": { "type": "string" },
+          "path": { "type": "string" },
+          "kind": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

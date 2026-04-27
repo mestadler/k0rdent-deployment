@@ -1,0 +1,14 @@
+name: report
+purpose: Publish run summary and evidence index.
+consumes_schema: agents/schemas/input.schema.json
+produces_schema: agents/schemas/output.schema.json
+outputs:
+  phase_state: state/<run-id>/report.json
+  run_report: state/<run-id>/run-report.md
+success_criteria:
+  - Includes statuses for all phases.
+  - Includes artifact lock reference and deployed versions.
+  - Includes failed checks and recommended next action when applicable.
+failure_policy:
+  - status: blocked
+  - next_action: Rebuild report with complete phase evidence.

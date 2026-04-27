@@ -1,0 +1,50 @@
+name: Docs CI
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+      - "Makefile"
+      - "scripts/docs-agent-*.py"
+      - "DOCS-MAINTENANCE.md"
+      - "AGENTS.md"
+      - ".github/workflows/docs-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+      - "Makefile"
+      - "scripts/docs-agent-*.py"
+      - "DOCS-MAINTENANCE.md"
+      - "AGENTS.md"
+      - ".github/workflows/docs-ci.yml"
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install mkdocs
+          sudo apt-get update
+          sudo apt-get install -y ripgrep
+
+      - name: Run docs guardrails
+        run: make docs-check
+
+      - name: Build docs
+        run: make docs-build

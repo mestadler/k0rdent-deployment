@@ -1,0 +1,20 @@
+name: planner
+purpose: Build execution graph for target environment.
+consumes_schema: agents/schemas/input.schema.json
+produces_schema: agents/schemas/output.schema.json
+inputs:
+  required:
+    - run_id
+    - environment
+    - cluster_context
+    - version_set
+    - artifact_lock
+    - policy_profile
+outputs:
+  phase_state: state/<run-id>/planner.json
+success_criteria:
+  - Produces ordered phase graph for preflight, catalog, deploy, validation, report.
+  - Produces run metadata with commit SHA and timestamp.
+failure_policy:
+  - status: blocked
+  - next_action: Fix missing/invalid plan inputs before proceeding.

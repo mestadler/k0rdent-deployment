@@ -1,0 +1,39 @@
+apiVersion: k0rdent.io/v1alpha1
+kind: ArtifactLock
+metadata:
+  name: k0rdent-dev-lock
+  environment: dev
+spec:
+  generatedAt: "2026-04-27T12:08:47Z"
+  components:
+    kcm:
+      chart:
+        ref: oci://ghcr.io/k0rdent/kcm/charts/kcm
+        version: 1.8.0
+        digest: sha256:129ac55104c4dc34b44e1f6a8440312f49e3012fef4c63c03384e8954bcf4bcd
+      images:
+        - name: controller
+          ref: ghcr.io/k0rdent/kcm/controller:1.8.0
+          digest: sha256:25a30ca96a11c3e6c69f690de5f00cb34a49234bbc90ed9df42bec90fae0f7a6
+    ksm:
+      chart:
+        ref: oci://ghcr.io/k0rdent/ksm/charts/ksm
+        version: 1.8.0
+        digest: sha256:REPLACE_WITH_REAL_KSM_CHART_DIGEST
+      images:
+        - name: manager
+          ref: ghcr.io/k0rdent/ksm/manager:v1.8.0
+          digest: sha256:REPLACE_WITH_REAL_KSM_MANAGER_DIGEST
+    k0rdent-ui:
+      chart:
+        ref: oci://ghcr.io/k0rdent/k0rdent-ui/k0rdent-ui
+        version: 1.2.0
+        digest: sha256:REPLACE_WITH_REAL_K0RDENT_UI_CHART_DIGEST
+      images:
+        - name: ui
+          ref: ghcr.io/k0rdent/k0rdent-ui/k0rdent-ui:v1.2.0
+          digest: sha256:REPLACE_WITH_REAL_K0RDENT_UI_IMAGE_DIGEST
+status:
+  verification:
+    digestPinned: true
+    signatureVerified: false

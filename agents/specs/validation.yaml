@@ -1,0 +1,17 @@
+name: validation
+purpose: Confirm deployment health and multicluster readiness.
+consumes_schema: agents/schemas/input.schema.json
+produces_schema: agents/schemas/output.schema.json
+checks:
+  - deployment_rollout_status
+  - pod_readiness
+  - service_endpoints
+  - basic_api_reachability
+  - multicluster_smoke_onboarding
+outputs:
+  phase_state: state/<run-id>/validation.json
+success_criteria:
+  - All mandatory checks pass and evidence is stored.
+failure_policy:
+  - status: fail
+  - next_action: Triage failed checks before promotion.

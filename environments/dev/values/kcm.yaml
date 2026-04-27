@@ -1,0 +1,9 @@
+global:
+  environment: dev
+  clusterName: dev-cluster
+
+controller:
+  replicaCount: 1
+
+serviceMonitor:
+  enabled: false

@@ -1,0 +1,14 @@
+global:
+  environment: dev
+
+replicaCount: 1
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: k0rdent-ui.dev.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []

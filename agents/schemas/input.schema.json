@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/agents/input.schema.json",
+  "title": "Agent Input",
+  "type": "object",
+  "required": [
+    "run_id",
+    "environment",
+    "cluster_context",
+    "version_set",
+    "artifact_lock",
+    "policy_profile"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["dev", "stage", "prod"]
+    },
+    "cluster_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version_set": {
+      "type": "object",
+      "required": ["kcm", "ksm", "k0rdent_ui"],
+      "properties": {
+        "kcm": { "type": "string" },
+        "ksm": { "type": "string" },
+        "k0rdent_ui": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "artifact_lock": {
+      "type": "string",
+      "description": "Path to lock file"
+    },
+    "policy_profile": {
+      "type": "string",
+      "enum": ["strict", "standard", "relaxed"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

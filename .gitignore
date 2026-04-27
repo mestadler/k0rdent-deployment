@@ -1,0 +1,15 @@
+# Build artifacts
+site/
+docs/site/
+
+# Python caches
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# Local environment overrides and runtime state
+environments/*/config.env
+state/
+
+# OS/editor noise
+.DS_Store

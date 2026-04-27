@@ -1,0 +1,18 @@
+name: catalog
+purpose: Resolve and pin OCI artifacts used by deploy agent.
+consumes_schema: agents/schemas/input.schema.json
+produces_schema: agents/schemas/output.schema.json
+inputs:
+  required_files:
+    - environments/<environment>/artifact-lock.yaml
+actions:
+  - Verify chart references for kcm, ksm, k0rdent-ui.
+  - Verify digest pinning policy.
+  - Emit updated lock metadata if versions change.
+outputs:
+  phase_state: state/<run-id>/catalog.json
+success_criteria:
+  - Lock file contains all deployable components with immutable digests.
+failure_policy:
+  - status: fail
+  - next_action: Correct artifact references and regenerate lock data.
