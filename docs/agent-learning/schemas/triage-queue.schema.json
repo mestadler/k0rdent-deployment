@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/docs/agent-learning/schemas/triage-queue.schema.json",
+  "title": "Triage Queue",
+  "type": "object",
+  "required": ["version", "items"],
+  "properties": {
+    "version": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "triage_id",
+          "created_at",
+          "status",
+          "query_pattern",
+          "failure_class",
+          "linked_event_ids",
+          "priority"
+        ],
+        "properties": {
+          "triage_id": { "type": "string" },
+          "created_at": { "type": "string" },
+          "updated_at": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["new", "triaged", "proposed", "approved", "applied", "rejected"]
+          },
+          "query_pattern": { "type": "string" },
+          "failure_class": {
+            "type": "string",
+            "enum": [
+              "missing_alias",
+              "ambiguous_route",
+              "scoring_issue",
+              "doc_gap",
+              "scope_violation"
+            ]
+          },
+          "linked_event_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "expected_routes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "actual_routes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "priority": { "type": "string", "enum": ["high", "medium", "low"] },
+          "owner": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,3 +1,13 @@
+---
+intent: reference-clustertemplate-gcp-format
+audience: platform-engineers
+prereqs: k0rdent-management-cluster-with-template-crds
+inputs: gcp-specific-infrastructure-parameters-and-template-selection
+outputs: valid-gcp-clustertemplate-parameter-understanding-for-clusterdeployment-authoring
+related_docs: docs/reference/template/index.md, docs/reference/crds/index.md, docs/quickstarts/quickstart-2-gcp.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # GCP template parameters
 
 ## Common ClusterDeployment parameters

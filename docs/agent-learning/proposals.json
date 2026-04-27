@@ -1,0 +1,206 @@
+{
+  "version": "1",
+  "proposals": [
+    {
+      "proposal_id": "prop-2026-04-27-0001",
+      "created_at": "2026-04-27T17:43:14.232439+00:00",
+      "updated_at": "2026-04-27T17:43:14.232439+00:00",
+      "triage_id": "triage-2026-04-27-0001",
+      "status": "pending_review",
+      "type": "add_alias",
+      "target": {
+        "entity": "route",
+        "id": "troubleshoot-general"
+      },
+      "change": {
+        "op": "append_alias",
+        "value": "something is failing and i need diagnostics"
+      },
+      "dedup_key": "add_alias::troubleshoot-general::something is failing and i need diagnostics",
+      "rationale": "missing_alias observed for query pattern 'something is failing and i need diagnostics'",
+      "confidence": 0.8,
+      "classification": "missing_alias",
+      "evidence": {
+        "evidence_count": 1,
+        "linked_event_ids": [
+          "evt-2026-04-27-0003"
+        ],
+        "query_examples": [
+          "something is failing and i need diagnostics"
+        ],
+        "first_seen": "2026-04-27T17:17:00Z",
+        "last_seen": "2026-04-27T17:17:00Z",
+        "avg_confidence": 2.965,
+        "priority_mix": {
+          "high": 0,
+          "medium": 1,
+          "low": 0
+        }
+      },
+      "score": 78.117,
+      "score_breakdown": {
+        "frequency": 1.0,
+        "severity": 0.8,
+        "impact": 0.6,
+        "confidence_gap": 0.341,
+        "freshness": 1.0,
+        "weights": {
+          "frequency": 35,
+          "severity": 20,
+          "impact": 20,
+          "confidence_gap": 15,
+          "freshness": 10
+        }
+      },
+      "expected_impact": {
+        "shadow_acceptance_delta_pct": 1.0,
+        "golden_regression_risk": "low"
+      },
+      "review": {
+        "reviewed_by": "",
+        "review_notes": "",
+        "approved_at": "",
+        "rejected_at": ""
+      },
+      "applied": {
+        "applied_in_commit": "",
+        "applied_at": "",
+        "apply_notes": ""
+      }
+    },
+    {
+      "proposal_id": "prop-2026-04-27-0002",
+      "created_at": "2026-04-27T17:43:14.232439+00:00",
+      "updated_at": "2026-04-27T17:43:14.232439+00:00",
+      "triage_id": "triage-2026-04-27-0002",
+      "status": "pending_review",
+      "type": "add_alias",
+      "target": {
+        "entity": "route",
+        "id": "api-reference"
+      },
+      "change": {
+        "op": "append_alias",
+        "value": "where is the api spec for k0rdent"
+      },
+      "dedup_key": "add_alias::api-reference::where is the api spec for k0rdent",
+      "rationale": "missing_alias observed for query pattern 'where is the api spec for k0rdent'",
+      "confidence": 0.8,
+      "classification": "missing_alias",
+      "evidence": {
+        "evidence_count": 1,
+        "linked_event_ids": [
+          "evt-2026-04-27-0002"
+        ],
+        "query_examples": [
+          "where is the api spec for k0rdent"
+        ],
+        "first_seen": "2026-04-27T17:16:00Z",
+        "last_seen": "2026-04-27T17:16:00Z",
+        "avg_confidence": 4.115,
+        "priority_mix": {
+          "high": 0,
+          "medium": 1,
+          "low": 0
+        }
+      },
+      "score": 74.283,
+      "score_breakdown": {
+        "frequency": 1.0,
+        "severity": 0.8,
+        "impact": 0.6,
+        "confidence_gap": 0.086,
+        "freshness": 1.0,
+        "weights": {
+          "frequency": 35,
+          "severity": 20,
+          "impact": 20,
+          "confidence_gap": 15,
+          "freshness": 10
+        }
+      },
+      "expected_impact": {
+        "shadow_acceptance_delta_pct": 1.0,
+        "golden_regression_risk": "low"
+      },
+      "review": {
+        "reviewed_by": "",
+        "review_notes": "",
+        "approved_at": "",
+        "rejected_at": ""
+      },
+      "applied": {
+        "applied_in_commit": "",
+        "applied_at": "",
+        "apply_notes": ""
+      }
+    },
+    {
+      "proposal_id": "prop-2026-04-27-0003",
+      "created_at": "2026-04-27T17:43:14.232439+00:00",
+      "updated_at": "2026-04-27T17:43:14.232439+00:00",
+      "triage_id": "triage-2026-04-27-0003",
+      "status": "pending_review",
+      "type": "add_alias",
+      "target": {
+        "entity": "route",
+        "id": "quickstart-azure"
+      },
+      "change": {
+        "op": "append_alias",
+        "value": "aks clusterdeployment example"
+      },
+      "dedup_key": "add_alias::quickstart-azure::aks clusterdeployment example",
+      "rationale": "missing_alias observed for query pattern 'aks clusterdeployment example'",
+      "confidence": 0.8,
+      "classification": "missing_alias",
+      "evidence": {
+        "evidence_count": 1,
+        "linked_event_ids": [
+          "evt-2026-04-27-0001"
+        ],
+        "query_examples": [
+          "aks clusterdeployment example"
+        ],
+        "first_seen": "2026-04-27T17:15:00Z",
+        "last_seen": "2026-04-27T17:15:00Z",
+        "avg_confidence": 7.97,
+        "priority_mix": {
+          "high": 0,
+          "medium": 1,
+          "low": 0
+        }
+      },
+      "score": 73.0,
+      "score_breakdown": {
+        "frequency": 1.0,
+        "severity": 0.8,
+        "impact": 0.6,
+        "confidence_gap": 0.0,
+        "freshness": 1.0,
+        "weights": {
+          "frequency": 35,
+          "severity": 20,
+          "impact": 20,
+          "confidence_gap": 15,
+          "freshness": 10
+        }
+      },
+      "expected_impact": {
+        "shadow_acceptance_delta_pct": 1.0,
+        "golden_regression_risk": "low"
+      },
+      "review": {
+        "reviewed_by": "",
+        "review_notes": "",
+        "approved_at": "",
+        "rejected_at": ""
+      },
+      "applied": {
+        "applied_in_commit": "",
+        "applied_at": "",
+        "apply_notes": ""
+      }
+    }
+  ]
+}

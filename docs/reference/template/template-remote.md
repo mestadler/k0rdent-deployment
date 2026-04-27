@@ -1,3 +1,13 @@
+---
+intent: reference-clustertemplate-remote-format
+audience: platform-engineers
+prereqs: k0rdent-management-cluster-with-template-crds
+inputs: remote-host-ssh-parameters-and-template-selection
+outputs: valid-remote-clustertemplate-parameter-understanding-for-clusterdeployment-authoring
+related_docs: docs/reference/template/index.md, docs/reference/crds/index.md, docs/quickstarts/quickstart-2-remote.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # Remote machine parameters
 
 ## ClusterDeployment Parameters

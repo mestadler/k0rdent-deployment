@@ -1,3 +1,13 @@
+---
+intent: inspect-k0rdent-crd-fields-and-specs
+audience: platform-engineers
+prereqs: kubernetes-crd-basics-and-k0rdent-installed
+inputs: resource-kind-and-target-field-lookup
+outputs: authoritative-crd-field-reference-for-manifest-authoring
+related_docs: docs/api-specification/index.md, docs/reference/template/index.md, docs/user/user-create-cluster.md, docs/user/services/understanding-servicetemplates.md
+last_verified_version: 1.8.0
+---
+
 # API Reference
 
 Packages:

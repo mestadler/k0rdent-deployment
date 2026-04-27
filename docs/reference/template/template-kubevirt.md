@@ -1,3 +1,13 @@
+---
+intent: reference-clustertemplate-kubevirt-format
+audience: platform-engineers
+prereqs: k0rdent-management-cluster-with-template-crds
+inputs: kubevirt-specific-infrastructure-parameters-and-template-selection
+outputs: valid-kubevirt-clustertemplate-parameter-understanding-for-clusterdeployment-authoring
+related_docs: docs/reference/template/index.md, docs/reference/crds/index.md, docs/quickstarts/quickstart-2-kubevirt.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # KubeVirt cluster template parameters
 
 ## ClusterDeployment parameters

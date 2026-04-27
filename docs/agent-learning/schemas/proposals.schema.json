@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/docs/agent-learning/schemas/proposals.schema.json",
+  "title": "Learning Proposals",
+  "type": "object",
+  "required": ["version", "proposals"],
+  "properties": {
+    "version": { "type": "string" },
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "proposal_id",
+          "created_at",
+          "updated_at",
+          "triage_id",
+          "status",
+          "type",
+          "target",
+          "change",
+          "dedup_key",
+          "rationale",
+          "confidence",
+          "classification",
+          "evidence",
+          "score",
+          "score_breakdown",
+          "review",
+          "applied"
+        ],
+        "properties": {
+          "proposal_id": { "type": "string", "minLength": 1 },
+          "created_at": { "type": "string", "minLength": 1 },
+          "updated_at": { "type": "string", "minLength": 1 },
+          "triage_id": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["pending_review", "approved", "rejected", "applied"]
+          },
+          "type": {
+            "type": "string",
+            "enum": ["add_alias", "adjust_route_scoring", "doc_update", "test_update"]
+          },
+          "target": {
+            "type": "object",
+            "required": ["entity", "id"],
+            "properties": {
+              "entity": {
+                "type": "string",
+                "enum": ["route", "router", "doc", "golden", "shadow"]
+              },
+              "id": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          },
+          "change": {
+            "type": "object",
+            "description": "Patch-like payload for the proposal type"
+          },
+          "dedup_key": { "type": "string", "minLength": 1 },
+          "rationale": { "type": "string", "minLength": 1 },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "missing_alias",
+              "ambiguous_route",
+              "scoring_issue",
+              "doc_gap",
+              "scope_violation"
+            ]
+          },
+          "evidence": {
+            "type": "object",
+            "required": [
+              "evidence_count",
+              "linked_event_ids",
+              "query_examples",
+              "first_seen",
+              "last_seen",
+              "avg_confidence",
+              "priority_mix"
+            ],
+            "properties": {
+              "evidence_count": { "type": "integer", "minimum": 1 },
+              "linked_event_ids": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "minItems": 1
+              },
+              "query_examples": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "minItems": 1
+              },
+              "first_seen": { "type": "string", "minLength": 1 },
+              "last_seen": { "type": "string", "minLength": 1 },
+              "avg_confidence": { "type": "number", "minimum": 0 },
+              "priority_mix": {
+                "type": "object",
+                "required": ["high", "medium", "low"],
+                "properties": {
+                  "high": { "type": "integer", "minimum": 0 },
+                  "medium": { "type": "integer", "minimum": 0 },
+                  "low": { "type": "integer", "minimum": 0 }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "score": { "type": "number", "minimum": 0, "maximum": 100 },
+          "score_breakdown": {
+            "type": "object",
+            "required": [
+              "frequency",
+              "severity",
+              "impact",
+              "confidence_gap",
+              "freshness",
+              "weights"
+            ],
+            "properties": {
+              "frequency": { "type": "number", "minimum": 0, "maximum": 1 },
+              "severity": { "type": "number", "minimum": 0, "maximum": 1 },
+              "impact": { "type": "number", "minimum": 0, "maximum": 1 },
+              "confidence_gap": { "type": "number", "minimum": 0, "maximum": 1 },
+              "freshness": { "type": "number", "minimum": 0, "maximum": 1 },
+              "weights": {
+                "type": "object",
+                "required": ["frequency", "severity", "impact", "confidence_gap", "freshness"],
+                "properties": {
+                  "frequency": { "type": "number" },
+                  "severity": { "type": "number" },
+                  "impact": { "type": "number" },
+                  "confidence_gap": { "type": "number" },
+                  "freshness": { "type": "number" }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "expected_impact": {
+            "type": "object",
+            "properties": {
+              "shadow_acceptance_delta_pct": { "type": "number" },
+              "golden_regression_risk": {
+                "type": "string",
+                "enum": ["low", "medium", "high"]
+              }
+            },
+            "additionalProperties": false
+          },
+          "review": {
+            "type": "object",
+            "required": ["reviewed_by", "review_notes", "approved_at", "rejected_at"],
+            "properties": {
+              "reviewed_by": { "type": "string" },
+              "review_notes": { "type": "string" },
+              "approved_at": { "type": "string" },
+              "rejected_at": { "type": "string" }
+            },
+            "additionalProperties": false
+          },
+          "applied": {
+            "type": "object",
+            "required": ["applied_in_commit", "applied_at", "apply_notes"],
+            "properties": {
+              "applied_in_commit": { "type": "string" },
+              "applied_at": { "type": "string" },
+              "apply_notes": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

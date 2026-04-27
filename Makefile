@@ -1,4 +1,4 @@
-.PHONY: docs-build docs-serve docs-check docs-shadow-report
+.PHONY: docs-build docs-serve docs-check docs-shadow-report docs-learning-check docs-learning-propose docs-learning-checklist
 
 docs-build:
 	mkdocs build --strict -f mkdocs.yml
@@ -12,8 +12,18 @@ docs-check:
 	! rg -n "\\{\\{\\{" docs --glob "*.md"
 	! rg -n "\\.pathname" docs/api-specification/index.md
 	python3 scripts/docs-agent-check.py
+	python3 scripts/docs-agent-learning-check.py
 	python3 scripts/docs-agent-golden-check.py
 	python3 scripts/docs-agent-route.py --intent install-k0rdent-on-management-cluster --limit 1 >/dev/null
 
 docs-shadow-report:
 	python3 scripts/docs-agent-shadow-report.py
+
+docs-learning-check:
+	python3 scripts/docs-agent-learning-check.py
+
+docs-learning-propose:
+	python3 scripts/docs-agent-propose.py --max-proposals 15
+
+docs-learning-checklist:
+	python3 scripts/docs-agent-pr-checklist.py

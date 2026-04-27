@@ -1,3 +1,13 @@
+---
+intent: create-and-manage-bring-your-own-templates
+audience: platform-engineers
+prereqs: k0rdent-management-cluster-with-template-crds
+inputs: custom-template-source-definition-and-template-manifest-content
+outputs: validated-custom-provider-cluster-or-service-template-available-for-use
+related_docs: docs/reference/template/index.md, docs/reference/crds/index.md, docs/templatehowto/index.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 # Bring Your Own Templates
 
 In addition to the templates that ship with k0rdent, it's possible to make your own. These might represent different types of clusters, or they may represent additional services to add to a cluster. Follow these steps:

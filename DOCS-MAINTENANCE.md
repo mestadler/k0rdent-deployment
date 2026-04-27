@@ -105,6 +105,39 @@ Interpretation:
 - Use it to evaluate top-1 acceptable match quality for real-world phrasing.
 - Prioritize tuning when unacceptable matches or low-confidence cases increase.
 
+## Agent Learning Loop (v1)
+
+Learning loop files:
+
+- Failure log (JSONL): `docs/agent-learning/failure-log.jsonl`
+- Triage queue: `docs/agent-learning/triage-queue.json`
+- Proposals: `docs/agent-learning/proposals.json`
+- Schemas:
+  - `docs/agent-learning/schemas/failure-log-entry.schema.json`
+  - `docs/agent-learning/schemas/triage-queue.schema.json`
+  - `docs/agent-learning/schemas/proposals.schema.json`
+
+Operational flow:
+
+1. Ingest failures from shadow/runtime routing runs into `failure-log.jsonl`.
+2. Group and classify failures in `triage-queue.json`.
+3. Generate candidate tuning proposals in `proposals.json`.
+4. Review and approve/reject proposals manually.
+5. Apply approved updates, then validate with `make docs-check` and `make docs-shadow-report`.
+
+Current policy:
+
+- Proposal generation cadence is manual per run.
+- Keep a max of 15 proposals per run.
+- Generate PR checklist items only from approved proposals.
+
+Validation commands:
+
+- `make docs-learning-check` validates learning-loop schemas and starter data files.
+- `make docs-check` also runs learning-loop validation as part of the hard docs guardrail suite.
+- `make docs-learning-propose` generates up to 15 candidate proposals per run.
+- `make docs-learning-checklist` generates PR checklist items from approved proposals.
+
 ## Agent Metadata in Docs
 
 The following key docs must keep metadata frontmatter fields:

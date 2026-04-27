@@ -1,3 +1,13 @@
+---
+intent: discover-clustertemplate-reference-by-provider
+audience: platform-engineers
+prereqs: access-to-k0rdent-template-docs
+inputs: provider-and-cluster-type-selection
+outputs: selected-template-reference-path-and-next-step-docs
+related_docs: docs/reference/template/template-aws.md, docs/reference/template/template-azure.md, docs/reference/template/template-gcp.md, docs/reference/template/template-openstack.md, docs/reference/template/template-remote.md, docs/reference/template/template-kubevirt.md, docs/reference/template/template-vsphere.md, docs/reference/template/template-byo.md, docs/reference/template/template-predefined.md, docs/reference/crds/index.md
+last_verified_version: 1.8.0
+---
+
 # The Templates system
 
 By default, k0rdent delivers a set of default `ProviderTemplate`, `ClusterTemplate` and `ServiceTemplate` objects:

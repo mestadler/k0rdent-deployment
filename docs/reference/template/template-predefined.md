@@ -1,3 +1,13 @@
+---
+intent: reference-clustertemplate-predefined-management
+audience: platform-engineers
+prereqs: k0rdent-management-cluster-with-template-crds
+inputs: list-of-installed-predefined-templates-and-template-lifecycle-operation
+outputs: controlled-predefined-template-set-in-management-cluster
+related_docs: docs/reference/template/index.md, docs/reference/crds/index.md, docs/admin/installation/verify-install.md, docs/user/user-create-cluster.md
+last_verified_version: 1.8.0
+---
+
 ## Remove Templates shipped with k0rdent
 
 If you need to limit the templates that exist in your k0rdent installation, follow the instructions below:

@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "required_keys": [
+    "intent",
+    "audience",
+    "prereqs",
+    "inputs",
+    "outputs",
+    "related_docs",
+    "last_verified_version"
+  ],
+  "files": [
+    "docs/reference/template/index.md",
+    "docs/reference/template/template-aws.md",
+    "docs/reference/template/template-azure.md",
+    "docs/reference/template/template-gcp.md",
+    "docs/reference/template/template-openstack.md",
+    "docs/reference/template/template-remote.md",
+    "docs/reference/template/template-kubevirt.md",
+    "docs/reference/template/template-vsphere.md",
+    "docs/reference/template/template-predefined.md",
+    "docs/reference/template/template-byo.md",
+    "docs/reference/crds/index.md"
+  ]
+}

@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = ROOT / "docs/agent-docs-index.json"
 SCHEMA_PATH = ROOT / "docs/schemas/agent-docs-index.schema.json"
+METADATA_REQUIRED_PATH = ROOT / "docs/metadata-required.json"
 
 REQUIRED_ENTRY_KEYS = {
     "id",
@@ -44,23 +45,31 @@ def fail(msg: str) -> None:
     print(f"ERROR: {msg}")
 
 
-def parse_frontmatter_keys(path: Path) -> set[str]:
+def parse_frontmatter_fields(path: Path) -> dict[str, str]:
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
     if not lines or lines[0].strip() != "---":
-        return set()
+        return {}
 
-    keys = set()
+    fields: dict[str, str] = {}
     for line in lines[1:]:
         if line.strip() == "---":
             break
         if not line.strip() or line.lstrip().startswith("-"):
             continue
         if ":" in line:
-            key = line.split(":", 1)[0].strip()
+            key, val = line.split(":", 1)
+            key = key.strip()
             if key:
-                keys.add(key)
-    return keys
+                fields[key] = val.strip()
+    return fields
+
+
+def related_docs_are_repo_relative(value: str) -> bool:
+    docs = [v.strip() for v in value.split(",") if v.strip()]
+    if not docs:
+        return False
+    return all(d.startswith("docs/") for d in docs)
 
 
 def main() -> int:
@@ -154,11 +163,56 @@ def main() -> int:
             fail(f"Missing required key doc for metadata check: {doc}")
             errors += 1
             continue
-        keys = parse_frontmatter_keys(doc)
+        fields = parse_frontmatter_fields(doc)
+        keys = set(fields.keys())
         missing = REQUIRED_DOC_METADATA - keys
         if missing:
             fail(f"{doc.relative_to(ROOT)} missing metadata keys: {sorted(missing)}")
             errors += 1
+
+    if METADATA_REQUIRED_PATH.exists():
+        required_payload = json.loads(METADATA_REQUIRED_PATH.read_text(encoding="utf-8"))
+        required_keys = required_payload.get("required_keys", [])
+        required_files = required_payload.get("files", [])
+
+        if not isinstance(required_keys, list) or not all(
+            isinstance(k, str) for k in required_keys
+        ):
+            fail("docs/metadata-required.json required_keys must be an array of strings")
+            errors += 1
+            required_keys = []
+
+        if not isinstance(required_files, list) or not all(
+            isinstance(f, str) for f in required_files
+        ):
+            fail("docs/metadata-required.json files must be an array of strings")
+            errors += 1
+            required_files = []
+
+        required_key_set = set(required_keys)
+
+        for rel_path in required_files:
+            abs_path = ROOT / rel_path
+            if not abs_path.exists():
+                fail(f"metadata-required file does not exist: {rel_path}")
+                errors += 1
+                continue
+
+            fields = parse_frontmatter_fields(abs_path)
+            if not fields:
+                fail(f"{rel_path} is missing frontmatter")
+                errors += 1
+                continue
+
+            missing = required_key_set - set(fields.keys())
+            if missing:
+                fail(f"{rel_path} missing metadata-required keys: {sorted(missing)}")
+                errors += 1
+
+            related_docs = fields.get("related_docs", "")
+            if not related_docs_are_repo_relative(related_docs):
+                fail(f"{rel_path} has non-compliant related_docs; use docs/... paths")
+                errors += 1
 
     if errors:
         print(f"docs-agent-check failed with {errors} error(s)")
