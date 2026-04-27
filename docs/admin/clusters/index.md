@@ -1,0 +1,12 @@
+# Working With Clusters
+
+k0rdent enables you to create and manage Kubernetes child clusters on a variety of 
+infrastructure choices.  You can also "adopt" Kubernetes clusters created outside of
+k0rdent so that k0rdent can manage them. (You can also 
+"self-adopt" the management cluster so you can use k0rdent to manage itself.)
+
+- [Deploying standalone clusters](deploy-cluster.md)
+- [Updating standalone clusters](update-cluster.md)
+- [Adopting clusters](admin-adopting-clusters.md)
+- [IP Address Management (IPAM)](admin-adopting-clusters.md)
+- [Identity And Authorization Management](cluster-iam-setup.md)

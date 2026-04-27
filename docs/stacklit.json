@@ -1,0 +1,163 @@
+{
+  "$schema": "https://stacklit.dev/schema/v1.json",
+  "version": "1",
+  "generated_at": "2026-04-17T16:40:58Z",
+  "stacklit_version": "dev",
+  "merkle_hash": "2969e30118be68742f6eec313d48aaa9532347f0e794bebcb83b674ca409aa27",
+  "project": {
+    "name": "k0rdent-docs",
+    "root": ".",
+    "type": "single"
+  },
+  "tech": {
+    "primary_language": "javascript",
+    "languages": {
+      "javascript": {
+        "files": 2,
+        "lines": 42
+      }
+    },
+    "frameworks": [
+      "GitHub Actions"
+    ]
+  },
+  "structure": {
+    "entrypoints": null,
+    "total_files": 2,
+    "total_lines": 42
+  },
+  "modules": {
+    "javascripts": {
+      "purpose": "Javascripts",
+      "language": "javascript",
+      "files": 2,
+      "lines": 42,
+      "file_list": [
+        "feedback.js",
+        "plausible.js"
+      ],
+      "activity": "low"
+    }
+  },
+  "dependencies": {
+    "edges": null,
+    "entrypoints": null,
+    "most_depended": [
+      "javascripts"
+    ],
+    "isolated": [
+      "javascripts"
+    ]
+  },
+  "git": {
+    "hot_files": [
+      {
+        "path": "mkdocs.yml",
+        "commits_90d": 17
+      },
+      {
+        "path": "docs/admin/kof/kof-storing.md",
+        "commits_90d": 13
+      },
+      {
+        "path": "docs/admin/kof/kof-install.md",
+        "commits_90d": 11
+      },
+      {
+        "path": "docs/admin/kof/kof-upgrade.md",
+        "commits_90d": 11
+      },
+      {
+        "path": "includes/kof-install-includes.md",
+        "commits_90d": 7
+      },
+      {
+        "path": "docs/admin/kof/kof-multi-tenancy.md",
+        "commits_90d": 6
+      },
+      {
+        "path": "includes/kof-upgrade-includes.md",
+        "commits_90d": 6
+      },
+      {
+        "path": "docs/admin/kof/kof-grafana.md",
+        "commits_90d": 5
+      },
+      {
+        "path": "docs/admin/kof/kof-alerts.md",
+        "commits_90d": 4
+      },
+      {
+        "path": "docs/release-notes/release-notes-v1.8.0.md",
+        "commits_90d": 4
+      },
+      {
+        "path": "docs/admin/kof/kof-verification.md",
+        "commits_90d": 3
+      },
+      {
+        "path": "docs/admin/ksm/ksm-multiclusterservice.md",
+        "commits_90d": 3
+      },
+      {
+        "path": "docs/appendix/proxy.md",
+        "commits_90d": 3
+      },
+      {
+        "path": "docs/quickstarts/quickstart-2-openstack.md",
+        "commits_90d": 3
+      },
+      {
+        "path": "docs/release-notes/index.md",
+        "commits_90d": 3
+      },
+      {
+        "path": ".github/workflows/deploy-docs.yml",
+        "commits_90d": 2
+      },
+      {
+        "path": "docs/admin/backup/prepare-backups.md",
+        "commits_90d": 2
+      },
+      {
+        "path": "docs/admin/hosted-control-plane/index.md",
+        "commits_90d": 2
+      },
+      {
+        "path": "docs/admin/installation/verify-install.md",
+        "commits_90d": 2
+      },
+      {
+        "path": "docs/admin/kof/index.md",
+        "commits_90d": 2
+      }
+    ],
+    "recent": [
+      "docs/admin/kof/kof-install.md",
+      "includes/kof-install-includes.md",
+      "includes/kof-upgrade-includes.md",
+      "docs/img/k0rdent-logo-horizontal.svg",
+      "docs/admin/ksm/ksm-multiclusterservice.md",
+      "docs/appendix/appendix-extend-mgmt.md",
+      "docs/appendix/proxy.md"
+    ],
+    "stable": [
+      "docs/admin/backup/caveats.md",
+      "docs/admin/backup/restore.md",
+      "docs/admin/hosted-control-plane/hcp-kubevirt.md",
+      "docs/admin/hosted-control-plane/ingress.md",
+      "docs/admin/installation/prepare-mgmt-cluster/gcp.md",
+      "docs/admin/installation/prepare-mgmt-cluster/index.md",
+      "docs/admin/installation/prepare-mgmt-cluster/kubevirt.md",
+      "docs/admin/kof/kof-kcm-region.md",
+      "docs/admin/kof/kof-maintainence.md",
+      "docs/admin/kof/kof-resources.md"
+    ]
+  },
+  "hints": {
+    "do_not_touch": [
+      ".github/"
+    ]
+  },
+  "architecture": {}
+}

@@ -1,0 +1,500 @@
+{
+  "version": "1",
+  "generated_at": "2026-04-27T00:00:00Z",
+  "entries": [
+    {
+      "id": "overview-home",
+      "topic": "overview",
+      "intent": "understand-k0rdent-platform",
+      "entry_doc": "docs/index.md",
+      "related_docs": [
+        "docs/concepts/index.md",
+        "docs/admin/index.md",
+        "docs/user/index.md"
+      ],
+      "commands": [],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "what is k0rdent",
+        "k0rdent overview",
+        "platform overview"
+      ]
+    },
+    {
+      "id": "install-k0rdent",
+      "topic": "installation",
+      "intent": "install-k0rdent-on-management-cluster",
+      "entry_doc": "docs/admin/installation/install-k0rdent.md",
+      "related_docs": [
+        "docs/admin/installation/index.md",
+        "docs/admin/installation/verify-install.md"
+      ],
+      "commands": [
+        "helm install kcm oci://ghcr.io/k0rdent/kcm/charts/kcm --version 1.8.0 -n kcm-system --create-namespace"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "install k0rdent",
+        "kcm install",
+        "helm install kcm"
+      ]
+    },
+    {
+      "id": "verify-k0rdent-install",
+      "topic": "validation",
+      "intent": "verify-installation-health",
+      "entry_doc": "docs/admin/installation/verify-install.md",
+      "related_docs": [
+        "docs/admin/installation/install-k0rdent.md",
+        "docs/troubleshooting/index.md"
+      ],
+      "commands": [
+        "kubectl get pods -n kcm-system",
+        "kubectl get clustertemplate -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "verify k0rdent",
+        "check installation",
+        "post install checks",
+        "check kcm-system pods"
+      ]
+    },
+    {
+      "id": "quickstart-management-cluster",
+      "topic": "quickstart",
+      "intent": "bootstrap-management-cluster",
+      "entry_doc": "docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md",
+      "related_docs": [
+        "docs/quickstarts/index.md",
+        "docs/admin/installation/create-mgmt-clusters/mgmt-create-k0s-single.md"
+      ],
+      "commands": [
+        "sudo k0s install controller --enable-worker --no-taints",
+        "kubectl get nodes",
+        "helm version"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "quickstart 1",
+        "setup management cluster",
+        "bootstrap k0s cluster"
+      ]
+    },
+    {
+      "id": "deploy-workflow-dev",
+      "topic": "deployment",
+      "intent": "run-agent-driven-dev-deployment",
+      "entry_doc": "docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md",
+      "related_docs": [
+        "docs/admin/installation/install-k0rdent.md",
+        "docs/admin/installation/verify-install.md"
+      ],
+      "commands": [
+        "./pipelines/deploy-dev.sh",
+        "./scripts/preflight.sh environments/dev/config.env",
+        "./scripts/validate.sh environments/dev/config.env"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "run dev pipeline",
+        "deploy dev",
+        "agent deploy workflow"
+      ]
+    },
+    {
+      "id": "troubleshoot-general",
+      "topic": "troubleshooting",
+      "intent": "diagnose-common-issues",
+      "entry_doc": "docs/troubleshooting/index.md",
+      "related_docs": [
+        "docs/troubleshooting/events.md",
+        "docs/troubleshooting/known-issues-eks.md",
+        "docs/troubleshooting/known-issues-gcp.md"
+      ],
+      "commands": [
+        "kubectl get events -A",
+        "kubectl describe pod <pod> -n <namespace>"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "troubleshoot k0rdent",
+        "debug deployment",
+        "known issues"
+      ]
+    },
+    {
+      "id": "api-reference",
+      "topic": "api",
+      "intent": "inspect-k0rdent-api-spec",
+      "entry_doc": "docs/api-specification/index.md",
+      "related_docs": [
+        "docs/reference/crds/index.md",
+        "docs/openapi/k0rdent-api-1.6.0.json"
+      ],
+      "commands": [],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "api docs",
+        "openapi",
+        "api specification"
+      ]
+    },
+    {
+      "id": "quickstart-aws",
+      "topic": "quickstart",
+      "intent": "deploy-workload-cluster-on-aws",
+      "entry_doc": "docs/quickstarts/quickstart-2-aws.md",
+      "related_docs": [
+        "docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md",
+        "docs/reference/template/template-aws.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f my-aws-clusterdeployment1.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "aws quickstart",
+        "deploy on aws",
+        "aws clusterdeployment"
+      ]
+    },
+    {
+      "id": "quickstart-azure",
+      "topic": "quickstart",
+      "intent": "deploy-workload-cluster-on-azure",
+      "entry_doc": "docs/quickstarts/quickstart-2-azure.md",
+      "related_docs": [
+        "docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md",
+        "docs/reference/template/template-azure.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f my-azure-clusterdeployment1.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "azure quickstart",
+        "deploy on azure",
+        "azure clusterdeployment"
+      ]
+    },
+    {
+      "id": "quickstart-gcp",
+      "topic": "quickstart",
+      "intent": "deploy-workload-cluster-on-gcp",
+      "entry_doc": "docs/quickstarts/quickstart-2-gcp.md",
+      "related_docs": [
+        "docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md",
+        "docs/reference/template/template-gcp.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f my-gcp-clusterdeployment1.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "gcp quickstart",
+        "deploy on gcp",
+        "gcp clusterdeployment"
+      ]
+    },
+    {
+      "id": "quickstart-openstack",
+      "topic": "quickstart",
+      "intent": "deploy-workload-cluster-on-openstack",
+      "entry_doc": "docs/quickstarts/quickstart-2-openstack.md",
+      "related_docs": [
+        "docs/quickstarts/quickstart-1-mgmt-node-and-cluster.md",
+        "docs/reference/template/template-openstack.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f my-openstack-clusterdeployment1.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "openstack quickstart",
+        "deploy on openstack",
+        "openstack clusterdeployment"
+      ]
+    },
+    {
+      "id": "quickstart-remote",
+      "topic": "quickstart",
+      "intent": "deploy-remote-cluster",
+      "entry_doc": "docs/quickstarts/quickstart-2-remote.md",
+      "related_docs": [
+        "docs/reference/template/template-remote.md",
+        "docs/user/user-create-cluster.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f my-remote-clusterdeployment1.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "remote quickstart",
+        "deploy remote cluster",
+        "remote clusterdeployment"
+      ]
+    },
+    {
+      "id": "quickstart-kubevirt",
+      "topic": "quickstart",
+      "intent": "deploy-workload-cluster-on-kubevirt",
+      "entry_doc": "docs/quickstarts/quickstart-2-kubevirt.md",
+      "related_docs": [
+        "docs/reference/template/template-kubevirt.md",
+        "docs/admin/installation/prepare-mgmt-cluster/kubevirt.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f my-kubevirt-clusterdeployment1.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "kubevirt quickstart",
+        "deploy on kubevirt",
+        "kubevirt clusterdeployment"
+      ]
+    },
+    {
+      "id": "template-reference",
+      "topic": "reference",
+      "intent": "find-template-reference-by-provider",
+      "entry_doc": "docs/reference/template/index.md",
+      "related_docs": [
+        "docs/reference/template/template-aws.md",
+        "docs/reference/template/template-azure.md",
+        "docs/reference/template/template-openstack.md",
+        "docs/reference/template/template-remote.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl describe clustertemplate <template-name> -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "cluster template reference",
+        "template docs",
+        "provider templates"
+      ]
+    },
+    {
+      "id": "user-create-cluster",
+      "topic": "user-guide",
+      "intent": "create-clusterdeployment-from-template",
+      "entry_doc": "docs/user/user-create-cluster.md",
+      "related_docs": [
+        "docs/reference/template/index.md",
+        "docs/admin/clusters/deploy-cluster.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl apply -f <clusterdeployment>.yaml"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "clusterdeployment format",
+        "create clusterdeployment yaml",
+        "cluster deployment spec"
+      ]
+    },
+    {
+      "id": "services-management",
+      "topic": "services",
+      "intent": "manage-services-on-workload-clusters",
+      "entry_doc": "docs/user/services/index.md",
+      "related_docs": [
+        "docs/user/services/add-service-to-clusterdeployment.md",
+        "docs/user/services/service-upgrade.md",
+        "docs/user/services/checking-status.md"
+      ],
+      "commands": [
+        "kubectl get servicetemplate -n kcm-system",
+        "kubectl get clusterdeployment -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "service templates",
+        "manage services",
+        "multiclusterservice",
+        "add service to clusterdeployment"
+      ]
+    },
+    {
+      "id": "configure-authentication",
+      "topic": "authentication",
+      "intent": "configure-management-cluster-authentication",
+      "entry_doc": "docs/admin/installation/auth/index.md",
+      "related_docs": [
+        "docs/admin/installation/auth/entra-id.md",
+        "docs/admin/installation/auth/okta.md"
+      ],
+      "commands": [
+        "kubectl apply -f dex-config.yaml",
+        "kubectl get pods -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "oidc setup",
+        "okta setup",
+        "entra id setup",
+        "configure authentication"
+      ]
+    },
+    {
+      "id": "upgrade-k0rdent",
+      "topic": "upgrade",
+      "intent": "upgrade-k0rdent-version",
+      "entry_doc": "docs/admin/upgrade/index.md",
+      "related_docs": [
+        "docs/admin/upgrade/upgrade-to-1-8-0.md",
+        "docs/release-notes/index.md"
+      ],
+      "commands": [
+        "helm repo update",
+        "helm upgrade kcm oci://ghcr.io/k0rdent/kcm/charts/kcm --version <target-version> -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "upgrade docs",
+        "upgrade to 1.8.0",
+        "helm upgrade kcm"
+      ]
+    },
+    {
+      "id": "troubleshoot-events",
+      "topic": "troubleshooting",
+      "intent": "inspect-k0rdent-events",
+      "entry_doc": "docs/troubleshooting/events.md",
+      "related_docs": [
+        "docs/troubleshooting/index.md",
+        "docs/admin/installation/verify-install.md"
+      ],
+      "commands": [
+        "kubectl get events -A",
+        "kubectl get events -n kcm-system --sort-by=.lastTimestamp"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "kubernetes events",
+        "inspect events",
+        "event troubleshooting"
+      ]
+    },
+    {
+      "id": "docs-maintenance",
+      "topic": "docs-maintenance",
+      "intent": "maintain-docs-build-and-guardrails",
+      "entry_doc": "DOCS-MAINTENANCE.md",
+      "related_docs": [
+        "README.md",
+        "AGENTS.md",
+        "TODO.md"
+      ],
+      "commands": [
+        "make docs-check",
+        "make docs-build",
+        "make docs-serve"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core",
+      "aliases": [
+        "docs maintenance",
+        "docs build checks",
+        "mkdocs guardrails"
+      ]
+    },
+    {
+      "id": "cluster-template-format",
+      "topic": "templates",
+      "intent": "understand-clustertemplate-format",
+      "aliases": [
+        "cluster template format",
+        "clustertemplate schema",
+        "clustertemplate yaml example"
+      ],
+      "entry_doc": "docs/reference/template/index.md",
+      "related_docs": [
+        "docs/reference/template/template-aws.md",
+        "docs/reference/template/template-azure.md",
+        "docs/reference/template/template-remote.md"
+      ],
+      "commands": [
+        "kubectl get clustertemplate -n kcm-system",
+        "kubectl describe clustertemplate <template-name> -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core"
+    },
+    {
+      "id": "service-template-format",
+      "topic": "templates",
+      "intent": "understand-servicetemplate-format",
+      "aliases": [
+        "service template format",
+        "servicetemplate schema",
+        "servicetemplate parameters"
+      ],
+      "entry_doc": "docs/user/services/understanding-servicetemplates.md",
+      "related_docs": [
+        "docs/user/services/servicetemplate-parameters.md",
+        "docs/user/services/add-service-to-clusterdeployment.md",
+        "docs/reference/crds/index.md"
+      ],
+      "commands": [
+        "kubectl get servicetemplate -n kcm-system",
+        "kubectl describe servicetemplate <template-name> -n kcm-system"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core"
+    },
+    {
+      "id": "crd-reference",
+      "topic": "api",
+      "intent": "find-crd-fields-and-specs",
+      "aliases": [
+        "crd reference",
+        "crd schema",
+        "k0rdent crds",
+        "clusterdeployment crd",
+        "servicetemplate crd"
+      ],
+      "entry_doc": "docs/reference/crds/index.md",
+      "related_docs": [
+        "docs/api-specification/index.md",
+        "docs/user/user-create-cluster.md",
+        "docs/user/services/understanding-servicetemplates.md"
+      ],
+      "commands": [
+        "kubectl explain clusterdeployments.spec",
+        "kubectl explain servicetemplates.spec",
+        "kubectl get crd | grep k0rdent.mirantis.com"
+      ],
+      "last_verified_version": "1.8.0",
+      "scope": "core"
+    }
+  ]
+}

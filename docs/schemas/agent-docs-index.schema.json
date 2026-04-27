@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/docs/schemas/agent-docs-index.schema.json",
+  "title": "Agent Docs Index",
+  "type": "object",
+  "required": ["version", "generated_at", "entries"],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "topic",
+          "intent",
+          "entry_doc",
+          "related_docs",
+          "commands",
+          "last_verified_version",
+          "scope"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "topic": { "type": "string" },
+          "intent": { "type": "string" },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "entry_doc": { "type": "string" },
+          "related_docs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "commands": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "last_verified_version": { "type": "string" },
+          "scope": { "type": "string", "enum": ["core"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
