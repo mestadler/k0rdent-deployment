@@ -1,7 +1,7 @@
 {
   "version": "1",
-  "generated_at": "2026-04-27T17:59:53.024170+00:00",
-  "commit_sha": "3fed143",
+  "generated_at": "2026-04-27T18:06:06.516742+00:00",
+  "commit_sha": "50791b1",
   "input_file": "docs/shadow-queries.json",
   "summary": {
     "total_cases": 30,
@@ -138,7 +138,7 @@
         "quickstart-management-cluster"
       ],
       "top_route": "install-k0rdent",
-      "confidence": 11.633,
+      "confidence": 12.528,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -152,7 +152,7 @@
         "install-k0rdent"
       ],
       "top_route": "install-k0rdent",
-      "confidence": 6.647,
+      "confidence": 7.453,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -167,7 +167,7 @@
         "troubleshoot-general"
       ],
       "top_route": "verify-k0rdent-install",
-      "confidence": 12.769,
+      "confidence": 13.589,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -182,7 +182,7 @@
         "troubleshoot-events"
       ],
       "top_route": "verify-k0rdent-install",
-      "confidence": 5.464,
+      "confidence": 12.464,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -196,7 +196,7 @@
         "quickstart-management-cluster"
       ],
       "top_route": "quickstart-management-cluster",
-      "confidence": 5.903,
+      "confidence": 12.903,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -225,7 +225,7 @@
         "quickstart-aws"
       ],
       "top_route": "quickstart-aws",
-      "confidence": 12.117,
+      "confidence": 13.535,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -240,7 +240,7 @@
         "template-reference"
       ],
       "top_route": "quickstart-azure",
-      "confidence": 12.25,
+      "confidence": 12.727,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -254,7 +254,7 @@
         "quickstart-gcp"
       ],
       "top_route": "quickstart-gcp",
-      "confidence": 12.008,
+      "confidence": 13.258,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -268,7 +268,7 @@
         "quickstart-openstack"
       ],
       "top_route": "quickstart-openstack",
-      "confidence": 5.653,
+      "confidence": 6.936,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -297,7 +297,7 @@
         "quickstart-kubevirt"
       ],
       "top_route": "quickstart-kubevirt",
-      "confidence": 13.57,
+      "confidence": 15.025,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -312,7 +312,7 @@
         "template-reference"
       ],
       "top_route": "cluster-template-format",
-      "confidence": 7.817,
+      "confidence": 16.193,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -327,7 +327,7 @@
         "crd-reference"
       ],
       "top_route": "cluster-template-format",
-      "confidence": 6.57,
+      "confidence": 14.947,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -357,7 +357,7 @@
         "services-management"
       ],
       "top_route": "service-template-format",
-      "confidence": 7.421,
+      "confidence": 9.443,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -372,7 +372,7 @@
         "services-management"
       ],
       "top_route": "service-template-format",
-      "confidence": 6.966,
+      "confidence": 9.597,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -387,7 +387,7 @@
         "user-create-cluster"
       ],
       "top_route": "user-create-cluster",
-      "confidence": 8.472,
+      "confidence": 9.687,
       "acceptable": true,
       "alternative_used": true,
       "notes": ""
@@ -401,10 +401,10 @@
         "crd-reference",
         "service-template-format"
       ],
-      "top_route": "crd-reference",
-      "confidence": 8.192,
+      "top_route": "service-template-format",
+      "confidence": 10.163,
       "acceptable": true,
-      "alternative_used": false,
+      "alternative_used": true,
       "notes": ""
     },
     {
@@ -432,7 +432,7 @@
         "template-reference"
       ],
       "top_route": "user-create-cluster",
-      "confidence": 10.562,
+      "confidence": 11.874,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -447,7 +447,7 @@
         "service-template-format"
       ],
       "top_route": "services-management",
-      "confidence": 6.949,
+      "confidence": 13.949,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -461,7 +461,7 @@
         "services-management"
       ],
       "top_route": "services-management",
-      "confidence": 12.264,
+      "confidence": 12.969,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""
@@ -476,7 +476,7 @@
         "crd-reference"
       ],
       "top_route": "services-management",
-      "confidence": 7.434,
+      "confidence": 8.614,
       "acceptable": true,
       "alternative_used": false,
       "notes": ""

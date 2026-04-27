@@ -2,64 +2,350 @@
   "version": "1",
   "generated_at": "2026-04-27T23:00:00Z",
   "cases": [
-    {"query": "install k0rdent", "expected_top": "install-k0rdent", "mode": "strict"},
-    {"query": "helm install kcm", "expected_top": "install-k0rdent", "mode": "strict"},
-    {"query": "install k0rdent on management cluster", "expected_top": "install-k0rdent", "mode": "strict"},
-    {"query": "verify installation health", "expected_top": "verify-k0rdent-install", "mode": "strict"},
-    {"query": "post install checks", "expected_top": "verify-k0rdent-install", "mode": "strict"},
-    {"query": "check kcm-system pods", "expected_top": "verify-k0rdent-install", "mode": "strict"},
-    {"query": "setup management cluster", "expected_top": "quickstart-management-cluster", "mode": "strict"},
-    {"query": "quickstart 1", "expected_top": "quickstart-management-cluster", "mode": "strict"},
-    {"query": "run dev pipeline", "expected_top": "deploy-workflow-dev", "mode": "strict"},
-    {"query": "deploy dev", "expected_top": "deploy-workflow-dev", "mode": "lenient", "allowed_alternatives": ["quickstart-management-cluster"]},
-
-    {"query": "aws quickstart", "expected_top": "quickstart-aws", "mode": "strict"},
-    {"query": "deploy workload cluster on aws", "expected_top": "quickstart-aws", "mode": "strict"},
-    {"query": "azure quickstart", "expected_top": "quickstart-azure", "mode": "strict"},
-    {"query": "deploy workload cluster on azure", "expected_top": "quickstart-azure", "mode": "strict"},
-    {"query": "gcp quickstart", "expected_top": "quickstart-gcp", "mode": "strict"},
-    {"query": "deploy workload cluster on gcp", "expected_top": "quickstart-gcp", "mode": "strict"},
-    {"query": "openstack quickstart", "expected_top": "quickstart-openstack", "mode": "strict"},
-    {"query": "deploy workload cluster on openstack", "expected_top": "quickstart-openstack", "mode": "strict"},
-    {"query": "remote quickstart", "expected_top": "quickstart-remote", "mode": "strict"},
-    {"query": "deploy remote cluster", "expected_top": "quickstart-remote", "mode": "strict"},
-    {"query": "kubevirt quickstart", "expected_top": "quickstart-kubevirt", "mode": "strict"},
-    {"query": "deploy workload cluster on kubevirt", "expected_top": "quickstart-kubevirt", "mode": "strict"},
-
-    {"query": "cluster template format", "expected_top": "cluster-template-format", "mode": "strict"},
-    {"query": "clustertemplate schema", "expected_top": "cluster-template-format", "mode": "strict"},
-    {"query": "clustertemplate yaml example", "expected_top": "cluster-template-format", "mode": "strict"},
-    {"query": "provider templates", "expected_top": "template-reference", "mode": "strict"},
-    {"query": "template docs", "expected_top": "template-reference", "mode": "strict"},
-    {"query": "find template reference by provider", "expected_top": "template-reference", "mode": "strict"},
-    {"query": "service template format", "expected_top": "service-template-format", "mode": "strict"},
-    {"query": "service template schema", "expected_top": "service-template-format", "mode": "strict"},
-    {"query": "servicetemplate parameters", "expected_top": "service-template-format", "mode": "strict"},
-    {"query": "clusterdeployment crd", "expected_top": "crd-reference", "mode": "strict"},
-    {"query": "servicetemplate crd", "expected_top": "crd-reference", "mode": "strict"},
-    {"query": "k0rdent crds", "expected_top": "crd-reference", "mode": "strict"},
-    {"query": "crd schema", "expected_top": "crd-reference", "mode": "strict"},
-    {"query": "find crd fields and specs", "expected_top": "crd-reference", "mode": "strict"},
-
-    {"query": "create clusterdeployment yaml", "expected_top": "user-create-cluster", "mode": "strict"},
-    {"query": "clusterdeployment format", "expected_top": "user-create-cluster", "mode": "strict"},
-    {"query": "create cluster from template", "expected_top": "user-create-cluster", "mode": "strict"},
-    {"query": "manage services", "expected_top": "services-management", "mode": "strict"},
-    {"query": "service templates", "expected_top": "services-management", "mode": "strict"},
-    {"query": "add service to clusterdeployment", "expected_top": "services-management", "mode": "strict"},
-    {"query": "multiclusterservice", "expected_top": "services-management", "mode": "strict"},
-    {"query": "service upgrade", "expected_top": "services-management", "mode": "lenient", "allowed_alternatives": ["service-template-format"]},
-
-    {"query": "configure authentication", "expected_top": "configure-authentication", "mode": "strict"},
-    {"query": "okta setup", "expected_top": "configure-authentication", "mode": "strict"},
-    {"query": "entra id setup", "expected_top": "configure-authentication", "mode": "strict"},
-    {"query": "upgrade k0rdent", "expected_top": "upgrade-k0rdent", "mode": "strict"},
-    {"query": "upgrade to 1.8.0", "expected_top": "upgrade-k0rdent", "mode": "strict"},
-    {"query": "inspect k0rdent events", "expected_top": "troubleshoot-events", "mode": "strict"},
-    {"query": "kubernetes events", "expected_top": "troubleshoot-events", "mode": "strict"},
-    {"query": "troubleshoot k0rdent", "expected_top": "troubleshoot-general", "mode": "strict"},
-    {"query": "network latency diagnostics", "topic": "troubleshooting", "expected_top": "troubleshoot-general", "mode": "lenient", "allowed_alternatives": ["troubleshoot-events"]},
-    {"query": "api specification", "expected_top": "api-reference", "mode": "strict"},
-    {"query": "docs maintenance", "expected_top": "docs-maintenance", "mode": "strict"}
+    {
+      "query": "install k0rdent",
+      "expected_top": "install-k0rdent",
+      "mode": "strict"
+    },
+    {
+      "query": "helm install kcm",
+      "expected_top": "install-k0rdent",
+      "mode": "strict"
+    },
+    {
+      "query": "install k0rdent on management cluster",
+      "expected_top": "install-k0rdent",
+      "mode": "strict"
+    },
+    {
+      "query": "verify installation health",
+      "expected_top": "verify-k0rdent-install",
+      "mode": "strict"
+    },
+    {
+      "query": "post install checks",
+      "expected_top": "verify-k0rdent-install",
+      "mode": "strict"
+    },
+    {
+      "query": "check kcm-system pods",
+      "expected_top": "verify-k0rdent-install",
+      "mode": "strict"
+    },
+    {
+      "query": "setup management cluster",
+      "expected_top": "quickstart-management-cluster",
+      "mode": "strict"
+    },
+    {
+      "query": "quickstart 1",
+      "expected_top": "quickstart-management-cluster",
+      "mode": "strict"
+    },
+    {
+      "query": "run dev pipeline",
+      "expected_top": "deploy-workflow-dev",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy dev",
+      "expected_top": "deploy-workflow-dev",
+      "mode": "lenient",
+      "allowed_alternatives": [
+        "quickstart-management-cluster"
+      ]
+    },
+    {
+      "query": "aws quickstart",
+      "expected_top": "quickstart-aws",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy workload cluster on aws",
+      "expected_top": "quickstart-aws",
+      "mode": "strict"
+    },
+    {
+      "query": "azure quickstart",
+      "expected_top": "quickstart-azure",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy workload cluster on azure",
+      "expected_top": "quickstart-azure",
+      "mode": "strict"
+    },
+    {
+      "query": "gcp quickstart",
+      "expected_top": "quickstart-gcp",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy workload cluster on gcp",
+      "expected_top": "quickstart-gcp",
+      "mode": "strict"
+    },
+    {
+      "query": "openstack quickstart",
+      "expected_top": "quickstart-openstack",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy workload cluster on openstack",
+      "expected_top": "quickstart-openstack",
+      "mode": "strict"
+    },
+    {
+      "query": "remote quickstart",
+      "expected_top": "quickstart-remote",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy remote cluster",
+      "expected_top": "quickstart-remote",
+      "mode": "strict"
+    },
+    {
+      "query": "kubevirt quickstart",
+      "expected_top": "quickstart-kubevirt",
+      "mode": "strict"
+    },
+    {
+      "query": "deploy workload cluster on kubevirt",
+      "expected_top": "quickstart-kubevirt",
+      "mode": "strict"
+    },
+    {
+      "query": "cluster template format",
+      "expected_top": "cluster-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "clustertemplate schema",
+      "expected_top": "cluster-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "clustertemplate yaml example",
+      "expected_top": "cluster-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "provider templates",
+      "expected_top": "template-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "template docs",
+      "expected_top": "template-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "find template reference by provider",
+      "expected_top": "template-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "service template format",
+      "expected_top": "service-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "service template schema",
+      "expected_top": "service-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "servicetemplate parameters",
+      "expected_top": "service-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "clusterdeployment crd",
+      "expected_top": "crd-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "servicetemplate crd",
+      "expected_top": "crd-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "k0rdent crds",
+      "expected_top": "crd-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "crd schema",
+      "expected_top": "crd-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "find crd fields and specs",
+      "expected_top": "crd-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "create clusterdeployment yaml",
+      "expected_top": "user-create-cluster",
+      "mode": "strict"
+    },
+    {
+      "query": "clusterdeployment format",
+      "expected_top": "user-create-cluster",
+      "mode": "strict"
+    },
+    {
+      "query": "create cluster from template",
+      "expected_top": "user-create-cluster",
+      "mode": "strict"
+    },
+    {
+      "query": "manage services",
+      "expected_top": "services-management",
+      "mode": "strict"
+    },
+    {
+      "query": "service templates",
+      "expected_top": "services-management",
+      "mode": "strict"
+    },
+    {
+      "query": "add service to clusterdeployment",
+      "expected_top": "services-management",
+      "mode": "strict"
+    },
+    {
+      "query": "multiclusterservice",
+      "expected_top": "services-management",
+      "mode": "strict"
+    },
+    {
+      "query": "service upgrade",
+      "expected_top": "services-management",
+      "mode": "lenient",
+      "allowed_alternatives": [
+        "service-template-format"
+      ]
+    },
+    {
+      "query": "configure authentication",
+      "expected_top": "configure-authentication",
+      "mode": "strict"
+    },
+    {
+      "query": "okta setup",
+      "expected_top": "configure-authentication",
+      "mode": "strict"
+    },
+    {
+      "query": "entra id setup",
+      "expected_top": "configure-authentication",
+      "mode": "strict"
+    },
+    {
+      "query": "upgrade k0rdent",
+      "expected_top": "upgrade-k0rdent",
+      "mode": "strict"
+    },
+    {
+      "query": "upgrade to 1.8.0",
+      "expected_top": "upgrade-k0rdent",
+      "mode": "strict"
+    },
+    {
+      "query": "inspect k0rdent events",
+      "expected_top": "troubleshoot-events",
+      "mode": "strict"
+    },
+    {
+      "query": "kubernetes events",
+      "expected_top": "troubleshoot-events",
+      "mode": "strict"
+    },
+    {
+      "query": "troubleshoot k0rdent",
+      "expected_top": "troubleshoot-general",
+      "mode": "strict"
+    },
+    {
+      "query": "network latency diagnostics",
+      "topic": "troubleshooting",
+      "expected_top": "troubleshoot-general",
+      "mode": "lenient",
+      "allowed_alternatives": [
+        "troubleshoot-events"
+      ]
+    },
+    {
+      "query": "api specification",
+      "expected_top": "api-reference",
+      "mode": "strict"
+    },
+    {
+      "query": "docs maintenance",
+      "expected_top": "docs-maintenance",
+      "mode": "strict"
+    },
+    {
+      "query": "aws iam setup for quickstart",
+      "expected_top": "quickstart-aws",
+      "mode": "strict"
+    },
+    {
+      "query": "azure service principal quickstart",
+      "expected_top": "quickstart-azure",
+      "mode": "strict"
+    },
+    {
+      "query": "gcloud auth login quickstart",
+      "expected_top": "quickstart-gcp",
+      "mode": "strict"
+    },
+    {
+      "query": "openstack application credential quickstart",
+      "expected_top": "quickstart-openstack",
+      "mode": "strict"
+    },
+    {
+      "query": "remote ssh key secret setup",
+      "expected_top": "quickstart-remote",
+      "mode": "strict"
+    },
+    {
+      "query": "kubevirt infrastructure cluster preparation",
+      "expected_top": "quickstart-kubevirt",
+      "mode": "strict"
+    },
+    {
+      "query": "deploying a cluster with clusterdeployment",
+      "expected_top": "user-create-cluster",
+      "mode": "strict"
+    },
+    {
+      "query": "understanding servicetemplates",
+      "expected_top": "service-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "servicespec provider config parameters",
+      "expected_top": "service-template-format",
+      "mode": "strict"
+    },
+    {
+      "query": "beach head services",
+      "expected_top": "services-management",
+      "mode": "strict"
+    },
+    {
+      "query": "pause beach head services reconciliation",
+      "expected_top": "services-management",
+      "mode": "strict"
+    },
+    {
+      "query": "remove beach head services",
+      "expected_top": "services-management",
+      "mode": "strict"
+    }
   ]
 }

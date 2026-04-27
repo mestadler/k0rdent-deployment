@@ -39,7 +39,8 @@
         "install k0rdent",
         "kcm install",
         "helm install kcm",
-        "how do i install this platform"
+        "how do i install this platform",
+        "install k0rdent on management cluster"
       ]
     },
     {
@@ -62,7 +63,8 @@
         "check installation",
         "post install checks",
         "check kcm-system pods",
-        "install checks after helm"
+        "install checks after helm",
+        "pods in kcm-system are not all ready"
       ]
     },
     {
@@ -84,7 +86,8 @@
       "aliases": [
         "quickstart 1",
         "setup management cluster",
-        "bootstrap k0s cluster"
+        "bootstrap k0s cluster",
+        "bootstrap local management cluster quickly"
       ]
     },
     {
@@ -172,7 +175,8 @@
         "deploy on aws",
         "aws clusterdeployment",
         "i need the aws child cluster quickstart",
-        "deploy workload cluster on aws"
+        "deploy workload cluster on aws",
+        "aws iam setup for quickstart"
       ]
     },
     {
@@ -195,7 +199,8 @@
         "deploy on azure",
         "azure clusterdeployment",
         "aks clusterdeployment example",
-        "deploy workload cluster on azure"
+        "deploy workload cluster on azure",
+        "azure service principal quickstart"
       ]
     },
     {
@@ -218,7 +223,8 @@
         "deploy on gcp",
         "gcp clusterdeployment",
         "gke quickstart steps",
-        "deploy workload cluster on gcp"
+        "deploy workload cluster on gcp",
+        "gcloud auth login quickstart"
       ]
     },
     {
@@ -240,7 +246,8 @@
         "openstack quickstart",
         "deploy on openstack",
         "openstack clusterdeployment",
-        "deploy workload cluster on openstack"
+        "deploy workload cluster on openstack",
+        "openstack application credential quickstart"
       ]
     },
     {
@@ -285,7 +292,8 @@
         "deploy on kubevirt",
         "kubevirt clusterdeployment",
         "kubevirt workload cluster quickstart",
-        "deploy workload cluster on kubevirt"
+        "deploy workload cluster on kubevirt",
+        "kubevirt infrastructure cluster preparation"
       ]
     },
     {
@@ -331,7 +339,8 @@
         "clusterdeployment format",
         "create clusterdeployment yaml",
         "cluster deployment spec",
-        "create cluster from template"
+        "create cluster from template",
+        "deploying a cluster with clusterdeployment"
       ]
     },
     {
@@ -355,7 +364,8 @@
         "manage services",
         "multiclusterservice",
         "add service to clusterdeployment",
-        "upgrade a deployed service"
+        "upgrade a deployed service",
+        "how to attach services to a clusterdeployment"
       ]
     },
     {
@@ -455,7 +465,9 @@
       "aliases": [
         "cluster template format",
         "clustertemplate schema",
-        "clustertemplate yaml example"
+        "clustertemplate yaml example",
+        "cluster template yaml shape",
+        "where is clustertemplate schema documented"
       ],
       "entry_doc": "docs/reference/template/index.md",
       "related_docs": [
@@ -477,7 +489,9 @@
       "aliases": [
         "service template format",
         "servicetemplate schema",
-        "servicetemplate parameters"
+        "servicetemplate parameters",
+        "understanding servicetemplates",
+        "servicespec provider config parameters"
       ],
       "entry_doc": "docs/user/services/understanding-servicetemplates.md",
       "related_docs": [
