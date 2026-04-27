@@ -81,6 +81,30 @@ Guidance:
 - Use `lenient` only for fuzzy phrasing where two close routes are acceptable.
 - Keep current scope core-only and exclude `kof` from expected matches.
 
+## Shadow Routing Report (Report-Only)
+
+- Shadow corpus: `docs/shadow-queries.json`
+- Shadow input schema: `docs/shadow-queries.schema.json`
+- Report schema: `docs/reports/schemas/agent-shadow-report.schema.json`
+- Runner: `scripts/docs-agent-shadow-report.py`
+
+Run:
+
+```bash
+make docs-shadow-report
+```
+
+Outputs:
+
+- Markdown: `docs/reports/agent-shadow-report-YYYY-MM-DD.md`
+- JSON: `docs/reports/agent-shadow-report-YYYY-MM-DD.json`
+
+Interpretation:
+
+- This is report-only and does not fail CI.
+- Use it to evaluate top-1 acceptable match quality for real-world phrasing.
+- Prioritize tuning when unacceptable matches or low-confidence cases increase.
+
 ## Agent Metadata in Docs
 
 The following key docs must keep metadata frontmatter fields:

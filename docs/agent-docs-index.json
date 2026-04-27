@@ -38,7 +38,8 @@
       "aliases": [
         "install k0rdent",
         "kcm install",
-        "helm install kcm"
+        "helm install kcm",
+        "how do i install this platform"
       ]
     },
     {
@@ -60,7 +61,8 @@
         "verify k0rdent",
         "check installation",
         "post install checks",
-        "check kcm-system pods"
+        "check kcm-system pods",
+        "install checks after helm"
       ]
     },
     {
@@ -104,7 +106,8 @@
       "aliases": [
         "run dev pipeline",
         "deploy dev",
-        "agent deploy workflow"
+        "agent deploy workflow",
+        "run deployment scripts for dev environment"
       ]
     },
     {
@@ -126,7 +129,8 @@
       "aliases": [
         "troubleshoot k0rdent",
         "debug deployment",
-        "known issues"
+        "known issues",
+        "something is failing and i need diagnostics"
       ]
     },
     {
@@ -144,7 +148,8 @@
       "aliases": [
         "api docs",
         "openapi",
-        "api specification"
+        "api specification",
+        "where is the api spec for k0rdent"
       ]
     },
     {
@@ -165,7 +170,9 @@
       "aliases": [
         "aws quickstart",
         "deploy on aws",
-        "aws clusterdeployment"
+        "aws clusterdeployment",
+        "i need the aws child cluster quickstart",
+        "deploy workload cluster on aws"
       ]
     },
     {
@@ -186,7 +193,9 @@
       "aliases": [
         "azure quickstart",
         "deploy on azure",
-        "azure clusterdeployment"
+        "azure clusterdeployment",
+        "aks clusterdeployment example",
+        "deploy workload cluster on azure"
       ]
     },
     {
@@ -207,7 +216,9 @@
       "aliases": [
         "gcp quickstart",
         "deploy on gcp",
-        "gcp clusterdeployment"
+        "gcp clusterdeployment",
+        "gke quickstart steps",
+        "deploy workload cluster on gcp"
       ]
     },
     {
@@ -228,7 +239,8 @@
       "aliases": [
         "openstack quickstart",
         "deploy on openstack",
-        "openstack clusterdeployment"
+        "openstack clusterdeployment",
+        "deploy workload cluster on openstack"
       ]
     },
     {
@@ -249,7 +261,8 @@
       "aliases": [
         "remote quickstart",
         "deploy remote cluster",
-        "remote clusterdeployment"
+        "remote clusterdeployment",
+        "remote cluster onboarding quickstart"
       ]
     },
     {
@@ -270,7 +283,9 @@
       "aliases": [
         "kubevirt quickstart",
         "deploy on kubevirt",
-        "kubevirt clusterdeployment"
+        "kubevirt clusterdeployment",
+        "kubevirt workload cluster quickstart",
+        "deploy workload cluster on kubevirt"
       ]
     },
     {
@@ -293,7 +308,8 @@
       "aliases": [
         "cluster template reference",
         "template docs",
-        "provider templates"
+        "provider templates",
+        "provider template list by cloud"
       ]
     },
     {
@@ -314,7 +330,8 @@
       "aliases": [
         "clusterdeployment format",
         "create clusterdeployment yaml",
-        "cluster deployment spec"
+        "cluster deployment spec",
+        "create cluster from template"
       ]
     },
     {
@@ -337,7 +354,8 @@
         "service templates",
         "manage services",
         "multiclusterservice",
-        "add service to clusterdeployment"
+        "add service to clusterdeployment",
+        "upgrade a deployed service"
       ]
     },
     {
@@ -359,7 +377,8 @@
         "oidc setup",
         "okta setup",
         "entra id setup",
-        "configure authentication"
+        "configure authentication",
+        "configure oidc authentication for management cluster"
       ]
     },
     {
@@ -380,7 +399,8 @@
       "aliases": [
         "upgrade docs",
         "upgrade to 1.8.0",
-        "helm upgrade kcm"
+        "helm upgrade kcm",
+        "how to upgrade k0rdent from current version"
       ]
     },
     {
@@ -401,7 +421,8 @@
       "aliases": [
         "kubernetes events",
         "inspect events",
-        "event troubleshooting"
+        "event troubleshooting",
+        "inspect k0rdent events"
       ]
     },
     {
@@ -480,7 +501,8 @@
         "crd schema",
         "k0rdent crds",
         "clusterdeployment crd",
-        "servicetemplate crd"
+        "servicetemplate crd",
+        "show me all k0rdent crds"
       ],
       "entry_doc": "docs/reference/crds/index.md",
       "related_docs": [

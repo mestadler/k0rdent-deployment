@@ -1,0 +1,189 @@
+{
+  "version": "1",
+  "cases": [
+    {
+      "query": "how do i install this platform",
+      "expected_area": "installation",
+      "acceptable_routes": ["install-k0rdent", "quickstart-management-cluster"],
+      "priority": "high"
+    },
+    {
+      "query": "what command installs kcm",
+      "expected_area": "installation",
+      "acceptable_routes": ["install-k0rdent"],
+      "priority": "high"
+    },
+    {
+      "query": "install checks after helm",
+      "expected_area": "validation",
+      "acceptable_routes": ["verify-k0rdent-install", "troubleshoot-general"],
+      "priority": "high"
+    },
+    {
+      "query": "pods in kcm-system are not all ready",
+      "expected_area": "validation",
+      "acceptable_routes": ["verify-k0rdent-install", "troubleshoot-events"],
+      "priority": "high"
+    },
+    {
+      "query": "bootstrap local management cluster quickly",
+      "expected_area": "quickstart",
+      "acceptable_routes": ["quickstart-management-cluster"],
+      "priority": "high"
+    },
+    {
+      "query": "run deployment scripts for dev environment",
+      "expected_area": "deployment",
+      "acceptable_routes": ["deploy-workflow-dev", "quickstart-management-cluster"],
+      "priority": "medium"
+    },
+
+    {
+      "query": "i need the aws child cluster quickstart",
+      "expected_area": "quickstart-aws",
+      "acceptable_routes": ["quickstart-aws"],
+      "priority": "high"
+    },
+    {
+      "query": "aks clusterdeployment example",
+      "expected_area": "quickstart-azure",
+      "acceptable_routes": ["quickstart-azure", "template-reference"],
+      "priority": "high"
+    },
+    {
+      "query": "gke quickstart steps",
+      "expected_area": "quickstart-gcp",
+      "acceptable_routes": ["quickstart-gcp"],
+      "priority": "medium"
+    },
+    {
+      "query": "openstack child cluster walkthrough",
+      "expected_area": "quickstart-openstack",
+      "acceptable_routes": ["quickstart-openstack"],
+      "priority": "medium"
+    },
+    {
+      "query": "remote cluster onboarding quickstart",
+      "expected_area": "quickstart-remote",
+      "acceptable_routes": ["quickstart-remote", "user-create-cluster"],
+      "priority": "medium"
+    },
+    {
+      "query": "kubevirt workload cluster quickstart",
+      "expected_area": "quickstart-kubevirt",
+      "acceptable_routes": ["quickstart-kubevirt"],
+      "priority": "medium"
+    },
+
+    {
+      "query": "cluster template yaml shape",
+      "expected_area": "templates",
+      "acceptable_routes": ["cluster-template-format", "template-reference"],
+      "priority": "high"
+    },
+    {
+      "query": "where is clustertemplate schema documented",
+      "expected_area": "templates",
+      "acceptable_routes": ["cluster-template-format", "crd-reference"],
+      "priority": "high"
+    },
+    {
+      "query": "provider template list by cloud",
+      "expected_area": "templates",
+      "acceptable_routes": ["template-reference", "cluster-template-format"],
+      "priority": "high"
+    },
+    {
+      "query": "service template format and examples",
+      "expected_area": "service-templates",
+      "acceptable_routes": ["service-template-format", "services-management"],
+      "priority": "high"
+    },
+    {
+      "query": "servicetemplate parameters reference",
+      "expected_area": "service-templates",
+      "acceptable_routes": ["service-template-format", "services-management"],
+      "priority": "high"
+    },
+    {
+      "query": "clusterdeployment crd fields",
+      "expected_area": "crd",
+      "acceptable_routes": ["crd-reference", "user-create-cluster"],
+      "priority": "high"
+    },
+    {
+      "query": "servicetemplate crd spec",
+      "expected_area": "crd",
+      "acceptable_routes": ["crd-reference", "service-template-format"],
+      "priority": "high"
+    },
+    {
+      "query": "show me all k0rdent crds",
+      "expected_area": "crd",
+      "acceptable_routes": ["crd-reference", "api-reference"],
+      "priority": "high"
+    },
+
+    {
+      "query": "create clusterdeployment from template",
+      "expected_area": "user-guide",
+      "acceptable_routes": ["user-create-cluster", "template-reference"],
+      "priority": "high"
+    },
+    {
+      "query": "how to attach services to a clusterdeployment",
+      "expected_area": "services",
+      "acceptable_routes": ["services-management", "service-template-format"],
+      "priority": "high"
+    },
+    {
+      "query": "upgrade a deployed service",
+      "expected_area": "services",
+      "acceptable_routes": ["services-management"],
+      "priority": "medium"
+    },
+    {
+      "query": "what is multiclusterservice",
+      "expected_area": "services",
+      "acceptable_routes": ["services-management", "crd-reference"],
+      "priority": "medium"
+    },
+
+    {
+      "query": "configure oidc authentication for management cluster",
+      "expected_area": "authentication",
+      "acceptable_routes": ["configure-authentication"],
+      "priority": "high"
+    },
+    {
+      "query": "okta auth setup steps",
+      "expected_area": "authentication",
+      "acceptable_routes": ["configure-authentication"],
+      "priority": "medium"
+    },
+    {
+      "query": "how to upgrade k0rdent from current version",
+      "expected_area": "upgrade",
+      "acceptable_routes": ["upgrade-k0rdent", "install-k0rdent"],
+      "priority": "high"
+    },
+    {
+      "query": "event troubleshooting commands",
+      "expected_area": "troubleshooting",
+      "acceptable_routes": ["troubleshoot-events", "troubleshoot-general"],
+      "priority": "high"
+    },
+    {
+      "query": "something is failing and i need diagnostics",
+      "expected_area": "troubleshooting",
+      "acceptable_routes": ["troubleshoot-general", "troubleshoot-events"],
+      "priority": "medium"
+    },
+    {
+      "query": "where is the api spec for k0rdent",
+      "expected_area": "api",
+      "acceptable_routes": ["api-reference", "crd-reference"],
+      "priority": "medium"
+    }
+  ]
+}

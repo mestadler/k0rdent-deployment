@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/docs/reports/schemas/agent-shadow-report.schema.json",
+  "title": "Agent Shadow Report",
+  "type": "object",
+  "required": [
+    "version",
+    "generated_at",
+    "commit_sha",
+    "input_file",
+    "summary",
+    "category_stats",
+    "cases",
+    "failures",
+    "low_confidence"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "commit_sha": { "type": "string" },
+    "input_file": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_cases",
+        "acceptable_top1",
+        "acceptable_top1_pct",
+        "low_confidence_cases",
+        "out_of_scope_matches",
+        "missing_route_ids"
+      ],
+      "properties": {
+        "total_cases": { "type": "integer", "minimum": 0 },
+        "acceptable_top1": { "type": "integer", "minimum": 0 },
+        "acceptable_top1_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "low_confidence_cases": { "type": "integer", "minimum": 0 },
+        "out_of_scope_matches": { "type": "integer", "minimum": 0 },
+        "missing_route_ids": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "category_stats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["expected_area", "cases", "acceptable_top1", "acceptable_pct"],
+        "properties": {
+          "expected_area": { "type": "string" },
+          "cases": { "type": "integer", "minimum": 0 },
+          "acceptable_top1": { "type": "integer", "minimum": 0 },
+          "acceptable_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "index",
+          "query",
+          "expected_area",
+          "acceptable_routes",
+          "top_route",
+          "confidence",
+          "acceptable",
+          "alternative_used"
+        ],
+        "properties": {
+          "index": { "type": "integer", "minimum": 1 },
+          "query": { "type": "string" },
+          "topic": { "type": "string" },
+          "expected_area": { "type": "string" },
+          "acceptable_routes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "top_route": { "type": "string" },
+          "confidence": { "type": "number" },
+          "acceptable": { "type": "boolean" },
+          "alternative_used": { "type": "boolean" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "query", "expected_routes", "actual_route", "confidence", "reason"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 1 },
+          "query": { "type": "string" },
+          "expected_routes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "actual_route": { "type": "string" },
+          "confidence": { "type": "number" },
+          "reason": { "type": "string" },
+          "recommended_fix": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "low_confidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "query", "route", "confidence"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 1 },
+          "query": { "type": "string" },
+          "route": { "type": "string" },
+          "confidence": { "type": "number" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

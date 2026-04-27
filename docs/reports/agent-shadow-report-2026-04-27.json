@@ -1,0 +1,575 @@
+{
+  "version": "1",
+  "generated_at": "2026-04-27T16:55:39.477874+00:00",
+  "commit_sha": "7da1ded",
+  "input_file": "docs/shadow-queries.json",
+  "summary": {
+    "total_cases": 30,
+    "acceptable_top1": 30,
+    "acceptable_top1_pct": 100.0,
+    "low_confidence_cases": 0,
+    "out_of_scope_matches": 0,
+    "missing_route_ids": 0
+  },
+  "category_stats": [
+    {
+      "expected_area": "api",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "authentication",
+      "cases": 2,
+      "acceptable_top1": 2,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "crd",
+      "cases": 3,
+      "acceptable_top1": 3,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "deployment",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "installation",
+      "cases": 2,
+      "acceptable_top1": 2,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart-aws",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart-azure",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart-gcp",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart-kubevirt",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart-openstack",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "quickstart-remote",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "service-templates",
+      "cases": 2,
+      "acceptable_top1": 2,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "services",
+      "cases": 3,
+      "acceptable_top1": 3,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "templates",
+      "cases": 3,
+      "acceptable_top1": 3,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "troubleshooting",
+      "cases": 2,
+      "acceptable_top1": 2,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "upgrade",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "user-guide",
+      "cases": 1,
+      "acceptable_top1": 1,
+      "acceptable_pct": 100.0
+    },
+    {
+      "expected_area": "validation",
+      "cases": 2,
+      "acceptable_top1": 2,
+      "acceptable_pct": 100.0
+    }
+  ],
+  "cases": [
+    {
+      "index": 1,
+      "query": "how do i install this platform",
+      "topic": "",
+      "expected_area": "installation",
+      "acceptable_routes": [
+        "install-k0rdent",
+        "quickstart-management-cluster"
+      ],
+      "top_route": "install-k0rdent",
+      "confidence": 11.633,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "query": "what command installs kcm",
+      "topic": "",
+      "expected_area": "installation",
+      "acceptable_routes": [
+        "install-k0rdent"
+      ],
+      "top_route": "install-k0rdent",
+      "confidence": 6.647,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "query": "install checks after helm",
+      "topic": "",
+      "expected_area": "validation",
+      "acceptable_routes": [
+        "verify-k0rdent-install",
+        "troubleshoot-general"
+      ],
+      "top_route": "verify-k0rdent-install",
+      "confidence": 12.769,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "query": "pods in kcm-system are not all ready",
+      "topic": "",
+      "expected_area": "validation",
+      "acceptable_routes": [
+        "verify-k0rdent-install",
+        "troubleshoot-events"
+      ],
+      "top_route": "verify-k0rdent-install",
+      "confidence": 5.464,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "query": "bootstrap local management cluster quickly",
+      "topic": "",
+      "expected_area": "quickstart",
+      "acceptable_routes": [
+        "quickstart-management-cluster"
+      ],
+      "top_route": "quickstart-management-cluster",
+      "confidence": 5.903,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "query": "run deployment scripts for dev environment",
+      "topic": "",
+      "expected_area": "deployment",
+      "acceptable_routes": [
+        "deploy-workflow-dev",
+        "quickstart-management-cluster"
+      ],
+      "top_route": "deploy-workflow-dev",
+      "confidence": 11.315,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 7,
+      "query": "i need the aws child cluster quickstart",
+      "topic": "",
+      "expected_area": "quickstart-aws",
+      "acceptable_routes": [
+        "quickstart-aws"
+      ],
+      "top_route": "quickstart-aws",
+      "confidence": 12.117,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 8,
+      "query": "aks clusterdeployment example",
+      "topic": "",
+      "expected_area": "quickstart-azure",
+      "acceptable_routes": [
+        "quickstart-azure",
+        "template-reference"
+      ],
+      "top_route": "quickstart-azure",
+      "confidence": 12.25,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 9,
+      "query": "gke quickstart steps",
+      "topic": "",
+      "expected_area": "quickstart-gcp",
+      "acceptable_routes": [
+        "quickstart-gcp"
+      ],
+      "top_route": "quickstart-gcp",
+      "confidence": 12.008,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 10,
+      "query": "openstack child cluster walkthrough",
+      "topic": "",
+      "expected_area": "quickstart-openstack",
+      "acceptable_routes": [
+        "quickstart-openstack"
+      ],
+      "top_route": "quickstart-openstack",
+      "confidence": 5.653,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 11,
+      "query": "remote cluster onboarding quickstart",
+      "topic": "",
+      "expected_area": "quickstart-remote",
+      "acceptable_routes": [
+        "quickstart-remote",
+        "user-create-cluster"
+      ],
+      "top_route": "quickstart-remote",
+      "confidence": 13.052,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 12,
+      "query": "kubevirt workload cluster quickstart",
+      "topic": "",
+      "expected_area": "quickstart-kubevirt",
+      "acceptable_routes": [
+        "quickstart-kubevirt"
+      ],
+      "top_route": "quickstart-kubevirt",
+      "confidence": 13.57,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 13,
+      "query": "cluster template yaml shape",
+      "topic": "",
+      "expected_area": "templates",
+      "acceptable_routes": [
+        "cluster-template-format",
+        "template-reference"
+      ],
+      "top_route": "cluster-template-format",
+      "confidence": 7.817,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 14,
+      "query": "where is clustertemplate schema documented",
+      "topic": "",
+      "expected_area": "templates",
+      "acceptable_routes": [
+        "cluster-template-format",
+        "crd-reference"
+      ],
+      "top_route": "cluster-template-format",
+      "confidence": 6.57,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 15,
+      "query": "provider template list by cloud",
+      "topic": "",
+      "expected_area": "templates",
+      "acceptable_routes": [
+        "template-reference",
+        "cluster-template-format"
+      ],
+      "top_route": "template-reference",
+      "confidence": 12.091,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 16,
+      "query": "service template format and examples",
+      "topic": "",
+      "expected_area": "service-templates",
+      "acceptable_routes": [
+        "service-template-format",
+        "services-management"
+      ],
+      "top_route": "service-template-format",
+      "confidence": 7.421,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 17,
+      "query": "servicetemplate parameters reference",
+      "topic": "",
+      "expected_area": "service-templates",
+      "acceptable_routes": [
+        "service-template-format",
+        "services-management"
+      ],
+      "top_route": "service-template-format",
+      "confidence": 6.966,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 18,
+      "query": "clusterdeployment crd fields",
+      "topic": "",
+      "expected_area": "crd",
+      "acceptable_routes": [
+        "crd-reference",
+        "user-create-cluster"
+      ],
+      "top_route": "user-create-cluster",
+      "confidence": 8.472,
+      "acceptable": true,
+      "alternative_used": true,
+      "notes": ""
+    },
+    {
+      "index": 19,
+      "query": "servicetemplate crd spec",
+      "topic": "",
+      "expected_area": "crd",
+      "acceptable_routes": [
+        "crd-reference",
+        "service-template-format"
+      ],
+      "top_route": "crd-reference",
+      "confidence": 8.192,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 20,
+      "query": "show me all k0rdent crds",
+      "topic": "",
+      "expected_area": "crd",
+      "acceptable_routes": [
+        "crd-reference",
+        "api-reference"
+      ],
+      "top_route": "crd-reference",
+      "confidence": 12.383,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 21,
+      "query": "create clusterdeployment from template",
+      "topic": "",
+      "expected_area": "user-guide",
+      "acceptable_routes": [
+        "user-create-cluster",
+        "template-reference"
+      ],
+      "top_route": "user-create-cluster",
+      "confidence": 10.562,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 22,
+      "query": "how to attach services to a clusterdeployment",
+      "topic": "",
+      "expected_area": "services",
+      "acceptable_routes": [
+        "services-management",
+        "service-template-format"
+      ],
+      "top_route": "services-management",
+      "confidence": 6.949,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 23,
+      "query": "upgrade a deployed service",
+      "topic": "",
+      "expected_area": "services",
+      "acceptable_routes": [
+        "services-management"
+      ],
+      "top_route": "services-management",
+      "confidence": 12.264,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 24,
+      "query": "what is multiclusterservice",
+      "topic": "",
+      "expected_area": "services",
+      "acceptable_routes": [
+        "services-management",
+        "crd-reference"
+      ],
+      "top_route": "services-management",
+      "confidence": 7.434,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 25,
+      "query": "configure oidc authentication for management cluster",
+      "topic": "",
+      "expected_area": "authentication",
+      "acceptable_routes": [
+        "configure-authentication"
+      ],
+      "top_route": "configure-authentication",
+      "confidence": 11.619,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 26,
+      "query": "okta auth setup steps",
+      "topic": "",
+      "expected_area": "authentication",
+      "acceptable_routes": [
+        "configure-authentication"
+      ],
+      "top_route": "configure-authentication",
+      "confidence": 7.162,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 27,
+      "query": "how to upgrade k0rdent from current version",
+      "topic": "",
+      "expected_area": "upgrade",
+      "acceptable_routes": [
+        "upgrade-k0rdent",
+        "install-k0rdent"
+      ],
+      "top_route": "upgrade-k0rdent",
+      "confidence": 12.06,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 28,
+      "query": "event troubleshooting commands",
+      "topic": "",
+      "expected_area": "troubleshooting",
+      "acceptable_routes": [
+        "troubleshoot-events",
+        "troubleshoot-general"
+      ],
+      "top_route": "troubleshoot-events",
+      "confidence": 5.315,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 29,
+      "query": "something is failing and i need diagnostics",
+      "topic": "",
+      "expected_area": "troubleshooting",
+      "acceptable_routes": [
+        "troubleshoot-general",
+        "troubleshoot-events"
+      ],
+      "top_route": "troubleshoot-general",
+      "confidence": 9.33,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    },
+    {
+      "index": 30,
+      "query": "where is the api spec for k0rdent",
+      "topic": "",
+      "expected_area": "api",
+      "acceptable_routes": [
+        "api-reference",
+        "crd-reference"
+      ],
+      "top_route": "api-reference",
+      "confidence": 10.64,
+      "acceptable": true,
+      "alternative_used": false,
+      "notes": ""
+    }
+  ],
+  "failures": [],
+  "low_confidence": []
+}

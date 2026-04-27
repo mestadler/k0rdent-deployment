@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://k0rdent.local/docs/shadow-queries.schema.json",
+  "title": "Shadow Queries",
+  "type": "object",
+  "required": ["version", "cases"],
+  "properties": {
+    "version": { "type": "string" },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["query", "expected_area", "acceptable_routes", "priority"],
+        "properties": {
+          "query": { "type": "string" },
+          "topic": { "type": "string" },
+          "expected_area": { "type": "string" },
+          "acceptable_routes": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "priority": { "type": "string", "enum": ["high", "medium", "low"] },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
