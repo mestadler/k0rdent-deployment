@@ -439,7 +439,7 @@
       "id": "docs-maintenance",
       "topic": "docs-maintenance",
       "intent": "maintain-docs-build-and-guardrails",
-      "entry_doc": "DOCS-MAINTENANCE.md",
+      "entry_doc": "AGENT-DOCS-OPERATIONS.md",
       "related_docs": [
         "README.md",
         "AGENTS.md",

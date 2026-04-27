@@ -19,7 +19,7 @@ Current rollout scope:
 - `docs/`: k0rdent product and operations documentation.
 - `docs/agent-docs-index.json`: machine-readable routing index for agent intent lookup.
 - `docs/schemas/agent-docs-index.schema.json`: schema contract for the routing index.
-- `DOCS-MAINTENANCE.md`: documentation maintenance and version-refresh checklist.
+- `AGENT-DOCS-OPERATIONS.md`: operator runbook for docs routing, quality gates, and maintenance.
 - `TODO.md`: tracked backlog for upcoming agent and docs improvements.
 
 ## Execution Workflow
@@ -55,6 +55,11 @@ Required handoff fields:
 - Validate routing quality with both:
   - `docs/golden-queries.json` (hard gate via `make docs-check`)
   - `docs/shadow-queries.json` (report-only via `make docs-shadow-report`)
+
+## Doc Usage Guide
+
+- Use `AGENTS.md` for repository policy and execution contract.
+- Use `AGENT-DOCS-OPERATIONS.md` for day-to-day operator workflows and maintenance commands.
 
 ## Current Baseline
 

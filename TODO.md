@@ -7,7 +7,7 @@
 - [x] Configure `mkdocs.yml` with `use_directory_urls: false` for reliable `file://` navigation.
 - [x] Fix API specification ReDoc URL loading (`.href` instead of `.pathname`).
 - [x] Improve `docs/bare-metal-new.md` as a usable work-in-progress page with starter links.
-- [x] Add docs maintenance guide in `DOCS-MAINTENANCE.md`.
+- [x] Add docs maintenance guide in `AGENT-DOCS-OPERATIONS.md`.
 - [x] Add docs guardrail target `make docs-check` in `Makefile`.
 - [x] Add CI workflow `.github/workflows/docs-ci.yml` for docs checks/build on PRs and `main` pushes.
 - [x] Link `TODO.md` from `README.md` and `AGENTS.md`.
@@ -36,6 +36,7 @@
 - [ ] PR3: metadata coverage reporting (`make docs-metadata-report`) and policy hardening.
 - [ ] Add proposal ranking/dedup consistency checks to learning-loop validation.
 - [ ] Promote stable shadow query families into stricter golden coverage where appropriate.
+- [ ] Publish and iterate `AGENT-DOCS-METHOD.md` as an external shareable reference.
 
 ## Agent Docs Enablement
 
@@ -89,7 +90,7 @@
 - [x] Update `.github/workflows/docs-ci.yml` to run new checks.
 
 ### 6) Documentation for maintainers
-- [x] Update `DOCS-MAINTENANCE.md`:
+- [x] Update `AGENT-DOCS-OPERATIONS.md`:
   - how to refresh agent index
   - how to verify metadata completeness
   - version refresh process for agent references

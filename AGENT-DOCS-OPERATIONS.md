@@ -1,4 +1,4 @@
-# Docs Maintenance
+# AGENT-DOCS-OPERATIONS
 
 This repository uses MkDocs to build static HTML from the `docs/` source directory.
 

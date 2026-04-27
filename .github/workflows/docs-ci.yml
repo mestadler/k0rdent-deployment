@@ -7,7 +7,7 @@ on:
       - "mkdocs.yml"
       - "Makefile"
       - "scripts/docs-agent-*.py"
-      - "DOCS-MAINTENANCE.md"
+      - "AGENT-DOCS-OPERATIONS.md"
       - "AGENTS.md"
       - ".github/workflows/docs-ci.yml"
   push:
@@ -18,7 +18,7 @@ on:
       - "mkdocs.yml"
       - "Makefile"
       - "scripts/docs-agent-*.py"
-      - "DOCS-MAINTENANCE.md"
+      - "AGENT-DOCS-OPERATIONS.md"
       - "AGENTS.md"
       - ".github/workflows/docs-ci.yml"
   workflow_dispatch:

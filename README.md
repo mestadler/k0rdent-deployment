@@ -33,5 +33,5 @@ Planned follow-up work is tracked in `TODO.md`.
 - `scripts/`: preflight, deploy, validate, smoke, and report steps.
 - `pipelines/`: orchestration entrypoints.
 - `docs/agent-docs-index.json`: machine-readable docs routing index for agents.
-- `DOCS-MAINTENANCE.md`: docs maintenance guide and version refresh checklist.
+- `AGENT-DOCS-OPERATIONS.md`: operator runbook for docs routing, quality gates, and maintenance.
 - `TODO.md`: backlog of planned implementation and docs improvements.
