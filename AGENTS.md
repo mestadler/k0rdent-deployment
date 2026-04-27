@@ -59,6 +59,7 @@ Required handoff fields:
 - Pin versions and digests in `environments/<env>/artifact-lock.yaml`.
 - Use environment config from `environments/<env>/config.env`.
 - Do not include `kof` in this deployment track.
+- Treat nested `docs/` as intentionally diverged for this deployment workspace; do not auto-sync it to upstream without explicit review.
 
 ## Safety Guardrails
 
