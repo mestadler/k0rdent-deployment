@@ -1,6 +1,6 @@
 # AGENT-DOCS-OPERATIONS
 
-This repository uses MkDocs to build static HTML from the `docs/` source directory.
+This method turns operational documentation into a reliable system for agent execution by combining deterministic routing, regression-tested query suites, and a continuous learning loop, with the source of truth being /docs
 
 ## Source of Truth
 
