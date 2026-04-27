@@ -11,6 +11,11 @@
 - [x] Add docs guardrail target `make docs-check` in `Makefile`.
 - [x] Add CI workflow `.github/workflows/docs-ci.yml` for docs checks/build on PRs and `main` pushes.
 - [x] Link `TODO.md` from `README.md` and `AGENTS.md`.
+- [x] Expand metadata coverage for template/CRD docs (P0) with enforced required keys.
+- [x] Expand metadata coverage for quickstart/user/service docs (P1) with enforced required keys.
+- [x] Add report-only shadow routing workflow and keep it green.
+- [x] Expand golden routing suite from 55 to 67 cases and keep it green.
+- [x] Add learning-loop scaffolding, validation, proposal generation, and PR checklist scripts.
 
 ## Active Milestone
 
@@ -20,21 +25,33 @@
   - Harden install/verify runbooks for reproducible operator execution.
   - Validate dev deployment command flow and document blockers.
 
+### Current Quality Snapshot
+
+- Golden routing: `67/67` pass (`make docs-check`).
+- Shadow routing: `30/30` acceptable top-1, low-confidence `0` (`make docs-shadow-report`).
+- Metadata enforcement: active via `docs/metadata-required.json` (P0 + P1 files).
+
+### Next Up (pause handoff)
+
+- [ ] PR3: metadata coverage reporting (`make docs-metadata-report`) and policy hardening.
+- [ ] Add proposal ranking/dedup consistency checks to learning-loop validation.
+- [ ] Promote stable shadow query families into stricter golden coverage where appropriate.
+
 ## Agent Docs Enablement
 
 ### 1) Add machine-readable docs index
-- [ ] Create `docs/agent-docs-index.json` schema:
+- [x] Create `docs/agent-docs-index.json` schema:
   - `topic`
   - `intent`
   - `entry_doc`
   - `related_docs`
   - `commands`
   - `last_verified_version`
-- [ ] Seed index with high-value paths (install, preflight, deploy, validate, troubleshoot, API).
-- [ ] Add CI check to validate JSON schema and required fields.
+- [x] Seed index with high-value paths (install, preflight, deploy, validate, troubleshoot, API).
+- [x] Add CI check to validate JSON schema and required fields.
 
 ### 2) Add agent metadata to key docs
-- [ ] Define frontmatter fields for agent consumption:
+- [x] Define frontmatter fields for agent consumption:
   - `intent`
   - `audience`
   - `prereqs`
@@ -42,7 +59,7 @@
   - `outputs`
   - `related_docs`
   - `last_verified_version`
-- [ ] Apply to initial docs set:
+- [x] Apply to initial docs set:
   - `docs/index.md`
   - `docs/admin/installation/install-k0rdent.md`
   - `docs/admin/installation/verify-install.md`
@@ -63,20 +80,20 @@
 - [ ] Add script to generate `docs/agent-docs-index.json` from:
   - curated mappings
   - `site/search/search_index.json` fallback
-- [ ] Add deterministic "best doc for intent" lookup rules.
+- [x] Add deterministic "best doc for intent" lookup rules.
 
 ### 5) CI and workflow integration
-- [ ] Extend `make docs-check` to include:
+- [x] Extend `make docs-check` to include:
   - `agent-docs-index.json` validation
   - frontmatter required field checks
-- [ ] Update `.github/workflows/docs-ci.yml` to run new checks.
+- [x] Update `.github/workflows/docs-ci.yml` to run new checks.
 
 ### 6) Documentation for maintainers
-- [ ] Update `DOCS-MAINTENANCE.md`:
+- [x] Update `DOCS-MAINTENANCE.md`:
   - how to refresh agent index
   - how to verify metadata completeness
   - version refresh process for agent references
-- [ ] Add "Agent docs contract" section to `AGENTS.md`.
+- [x] Add "Agent docs contract" section to `AGENTS.md`.
 
 ## Nice to have
 - [ ] Add `make docs-agent-check` target.

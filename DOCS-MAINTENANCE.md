@@ -159,6 +159,19 @@ Current key docs:
 - `docs/troubleshooting/index.md`
 - `docs/api-specification/index.md`
 
+Metadata-required policy file:
+
+- `docs/metadata-required.json` defines:
+  - required frontmatter keys
+  - enforced file list for priority docs
+
+Current enforcement scope includes:
+
+- P0 template + CRD reference docs
+- P1 quickstart + user/services docs
+
+All `related_docs` values in metadata-required files must use repository-relative `docs/...` paths.
+
 ## Version Refresh Checklist
 
 When introducing a new docs version:

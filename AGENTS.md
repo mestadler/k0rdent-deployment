@@ -52,6 +52,15 @@ Required handoff fields:
 - If no strong match is found, fall back to `site/search/search_index.json`.
 - Use `scripts/docs-agent-route.py` for deterministic resolution.
 - Keep the current routing scope to core rollout docs and exclude `kof`.
+- Validate routing quality with both:
+  - `docs/golden-queries.json` (hard gate via `make docs-check`)
+  - `docs/shadow-queries.json` (report-only via `make docs-shadow-report`)
+
+## Current Baseline
+
+- Golden routing coverage: 67 cases, expected to remain green.
+- Shadow routing quality: 30/30 acceptable top-1 in latest report.
+- Metadata-required enforcement is active for template/CRD and quickstart/user-service priority docs.
 
 ## Deployment Rules
 
