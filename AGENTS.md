@@ -20,6 +20,7 @@ Current rollout scope:
 - `docs/agent-docs-index.json`: machine-readable routing index for agent intent lookup.
 - `docs/schemas/agent-docs-index.schema.json`: schema contract for the routing index.
 - `AGENT-DOCS-OPERATIONS.md`: operator runbook for docs routing, quality gates, and maintenance.
+- `AGENT-DOCS-METHOD.md`: reusable reference for implementing this method in other projects.
 - `TODO.md`: tracked backlog for upcoming agent and docs improvements.
 
 ## Execution Workflow
@@ -60,6 +61,7 @@ Required handoff fields:
 
 - Use `AGENTS.md` for repository policy and execution contract.
 - Use `AGENT-DOCS-OPERATIONS.md` for day-to-day operator workflows and maintenance commands.
+- Use `AGENT-DOCS-METHOD.md` for a shareable, project-agnostic implementation blueprint.
 
 ## Current Baseline
 
