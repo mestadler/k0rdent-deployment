@@ -7,7 +7,7 @@ This repository uses MkDocs to build static HTML from the `docs/` source directo
 - Edit files in `docs/`.
 - Do not edit generated files in `site/`; they are overwritten on each build.
 - Build config is in `mkdocs.yml` at repository root.
-- The nested `docs/` repository in this workspace is intentionally diverged from upstream for deployment-focused agent workflows; keep local intent unless a deliberate upstream sync is requested.
+- The `docs/` tree is vendored and workspace-owned in this repository for deployment-focused agent workflows. Keep local intent unless a deliberate upstream sync/import is requested.
 
 ## Build and Preview
 
