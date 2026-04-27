@@ -12,6 +12,14 @@
 - [x] Add CI workflow `.github/workflows/docs-ci.yml` for docs checks/build on PRs and `main` pushes.
 - [x] Link `TODO.md` from `README.md` and `AGENTS.md`.
 
+## Active Milestone
+
+- GitHub issue: [#1 Milestone 1: Agent docs routing and deploy runbook hardening](https://github.com/mestadler/k0rdent-deployment/issues/1)
+- Current focus:
+  - Expand routing/index quality for agent intent resolution.
+  - Harden install/verify runbooks for reproducible operator execution.
+  - Validate dev deployment command flow and document blockers.
+
 ## Agent Docs Enablement
 
 ### 1) Add machine-readable docs index

@@ -12,4 +12,5 @@ docs-check:
 	! rg -n "\\{\\{\\{" docs --glob "*.md"
 	! rg -n "\\.pathname" docs/api-specification/index.md
 	python3 scripts/docs-agent-check.py
+	python3 scripts/docs-agent-golden-check.py
 	python3 scripts/docs-agent-route.py --intent install-k0rdent-on-management-cluster --limit 1 >/dev/null

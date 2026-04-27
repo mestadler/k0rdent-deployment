@@ -61,6 +61,26 @@ python3 scripts/docs-agent-route.py --intent "clusterdeployment crd"
 python3 scripts/docs-agent-route.py --intent "network latency diagnostics" --topic troubleshooting --limit 3
 ```
 
+## Golden Routing Queries
+
+- Golden test corpus: `docs/golden-queries.json`
+- Checker: `scripts/docs-agent-golden-check.py`
+- Included in guardrails via `make docs-check`.
+
+Query case fields:
+
+- `query` (required)
+- `expected_top` (required route id)
+- `mode` (`strict` or `lenient`)
+- `allowed_alternatives` (optional, max 2 recommended)
+- `topic` (optional hint)
+
+Guidance:
+
+- Use `strict` for deterministic operational intents (install, verify, templates, CRDs, upgrade).
+- Use `lenient` only for fuzzy phrasing where two close routes are acceptable.
+- Keep current scope core-only and exclude `kof` from expected matches.
+
 ## Agent Metadata in Docs
 
 The following key docs must keep metadata frontmatter fields:
