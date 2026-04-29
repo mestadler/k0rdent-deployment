@@ -84,6 +84,14 @@ Required handoff fields:
 - Fail fast on preflight and policy violations.
 - Promote environments only after validation evidence is complete.
 
+## Issue-First Delivery Workflow
+
+- Create or link a GitHub issue before implementation work starts.
+- Keep execution progress in the issue with short status updates and verification evidence.
+- Require each PR to close its primary issue and include command results used for verification.
+- Split oversized work into child issues under an umbrella issue instead of merging unrelated scope.
+- For multi-step tracks (like Milestone 2), use one umbrella issue for sequencing and keep detailed evidence in child issues.
+
 ## Quick Commands
 
 ```bash
