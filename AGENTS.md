@@ -36,6 +36,45 @@ Canonical phase order:
 
 Each run should write evidence to `state/<run-id>/`.
 
+## Dev Workflow Contract
+
+Use this contract for all `dev` installation runs and issue evidence.
+
+### Stage sequence
+
+1. planner
+2. preflight (`./scripts/preflight.sh`)
+3. catalog (`./scripts/catalog-lock.sh`)
+4. deploy (`./scripts/deploy.sh`)
+5. validation (`./scripts/validate.sh`)
+6. smoke (`./scripts/smoke.sh`)
+7. report (`./scripts/report.sh`)
+
+### Required run evidence format
+
+Record evidence under `state/<run-id>/` and summarize in the active issue comment with this minimum structure:
+
+- `run_id`: UTC timestamp-style id (for example `20260429T101530Z`)
+- `environment`: expected `dev`
+- `config_path`: `environments/dev/config.env`
+- `artifact_lock`: `environments/dev/artifact-lock.yaml`
+- `cluster_context`: kube context used for the run
+- `stage_status`: table with `stage | status(pass/fail/blocked) | evidence_path | notes`
+- `blockers`: table with `id | severity(must-fix/can-defer) | owner | workaround | next_action | status`
+- `env_snapshot`: key versions and tools (`kubectl`, `helm`, chart versions from config/lock)
+
+### Stage go/no-go criteria
+
+- planner -> preflight: proceed only when scope excludes `kof`, environment is `dev`, and run id/output path are defined.
+- preflight -> catalog: proceed only when required CLIs exist, context resolves, and node access succeeds.
+- catalog -> deploy: proceed only when lock file exists and required artifacts/versions are pinned for enabled components.
+- deploy -> validation: proceed only when Helm install/upgrade commands succeed for all enabled components.
+- validation -> smoke: proceed only when enabled component deployments report successful rollout status.
+- smoke -> report: proceed only when smoke commands return expected component pod listings without command failure.
+- report -> done: proceed only when `state/<run-id>/run-report.md` exists and issue evidence includes stage status + blocker tables.
+
+If any stage fails, stop the forward sequence, mark the stage as `fail` or `blocked`, and log blocker details before rerun.
+
 ## Agent Contracts
 
 - Shared input schema: `agents/schemas/input.schema.json`
